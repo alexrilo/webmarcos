@@ -1,0 +1,315 @@
+:root {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    
+}
+
+.conoceme {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(images/hospital.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+
+.conoceme__texto {
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.conoceme__texto h1 {
+    font-size: 5rem;
+}
+
+.conoceme__texto__movil {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .conoceme__texto__movil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        width: 100%;
+        color: black;
+        font-size: 1em;
+        background: #f4f4f4;
+        box-shadow: 9px 10px 10px -4px rgba(51, 50, 50, 0.363);
+    }
+
+    .container__section:first-of-type {
+        gap: 0;
+        /* Elimina el espacio entre los elementos hijos de la primera sección */
+    }
+
+
+    .conoceme__texto__movil div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin-bottom: 8rem;
+    }
+
+    .conoceme__texto {
+        color: white;
+        width: 80%;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        text-align: center;
+    }
+
+    .conoceme__texto h1 {
+        font-size: 1.1em;
+    }
+
+    .conoceme__texto h2 {
+        font-size: 1em;
+
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .conoceme__texto__movil p {
+        font-size: 1.2em;
+        text-align: center;
+
+    }
+
+    .conoceme__texto__movil h1 {
+        font-size: 2em;
+    }
+}
+
+.container__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: auto;
+    /* Ajusta la altura automáticamente */
+    gap: 3rem;
+    /* Espaciado entre elementos internos */
+
+    margin-bottom: .5rem;
+    /* Espacio entre esta sección y la siguiente */
+    background: inherit;
+    /* Mantiene el color de fondo alternado */
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.2);
+    /* Sombra hacia abajo */
+    border-radius: 8px;
+    /* Bordes redondeados */
+}
+
+.container__section h1 {
+    margin-top: 3rem;
+    /* Elimina márgenes superiores innecesarios */
+    margin-bottom: 3rem;
+    /* Espacio entre el h1 y el siguiente elemento */
+}
+
+.container__section:last-of-type {
+    margin-bottom: 0;
+    /* Elimina el margen inferior de la última sección */
+}
+
+.container__section img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    width: 100%;
+    max-width: 100%;
+    gap: 2rem;
+    margin-bottom: 15rem;
+}
+
+.container article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: #666;
+    font-size: 10px;
+
+}
+
+.article__text {
+    width: 80%;
+    text-align: center;
+}
+
+.container article img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+
+
+.patologias__text {
+    font-size: 1.2rem;
+    text-align: start;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Alternar colores de fondo */
+.container__section:nth-child(odd) {
+    background: #f4f4f4;
+    /* Color blanco */
+}
+
+.container__section:nth-child(even) {
+    background: rgba(64, 224, 208, 0.2);
+    /* Color turquesa transparente */
+}
+
+#patologias h1 {
+    margin-bottom: 0;
+}
+
+/* Estilo para el checkbox (oculto) */
+.menu-toggle {
+    display: none;
+}
+
+.navbar {
+    flex-direction: column;
+    justify-content: start;
+    gap: 5rem;
+    text-align: center;
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: lightseagreen;
+    z-index: 2;
+    overflow-x: hidden;
+    transition: 0.3s;
+    display: none;
+}
+
+.navbar a {
+    
+    text-decoration: none;
+    font-size: 25px;
+    height: 60px;
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: black;
+    background-color: white;
+}
+
+.navbar__header {
+    padding-top: 15%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    font-size: 1em;
+    color: white;
+}
+
+.navbar__header img {
+    width: 30%;
+    height: auto;
+}
+
+
+/* Fondo oscuro (overlay) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo oscuro semi-transparente */
+    z-index: 2;
+    /* Asegúrate de que el overlay esté por encima del contenido */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Estilo para el ícono de hamburguesa */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+/* Cuando el checkbox está marcado, se abre el menú */
+#menu-toggle:checked ~ .navbar {
+    display: flex;
+}
+
+#menu-toggle:checked ~ .overlay {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0s 0s;
+}
+#menu-toggle:checked .menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100vw;
+    }
+}
+
+
+
