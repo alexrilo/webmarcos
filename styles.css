@@ -1,15 +1,13 @@
+/* Variables globales */
 :root {
     width: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 0;
 }
 
+/* General */
 body {
     display: flex;
     flex-direction: column;
@@ -17,14 +15,10 @@ body {
     align-items: start;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 0;
-    
 }
 
+/* Sección "Conóceme" */
 .conoceme {
     display: flex;
     justify-content: space-evenly;
@@ -35,9 +29,9 @@ body {
     width: 100%;
     height: auto;
     box-sizing: border-box;
+    gap: 2rem;
+    text-align: start;
 }
-
-
 
 .conoceme__texto {
     color: white;
@@ -53,68 +47,9 @@ body {
     display: none;
 }
 
-@media (max-width: 768px) {
-
-    .conoceme__texto__movil {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        width: 100%;
-        color: black;
-        font-size: 1em;
-        background: #f4f4f4;
-        box-shadow: 9px 10px 10px -4px rgba(51, 50, 50, 0.363);
-    }
-
-    .container__section:first-of-type {
-        gap: 0;
-        /* Elimina el espacio entre los elementos hijos de la primera sección */
-    }
 
 
-    .conoceme__texto__movil div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 100%;
-        margin-bottom: 8rem;
-    }
-
-    .conoceme__texto {
-        color: white;
-        width: 80%;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        text-align: center;
-    }
-
-    .conoceme__texto h1 {
-        font-size: 1.1em;
-    }
-
-    .conoceme__texto h2 {
-        font-size: 1em;
-
-    }
-
-    .pc {
-        display: none;
-    }
-
-    .conoceme__texto__movil p {
-        font-size: 1.2em;
-        text-align: center;
-
-    }
-
-    .conoceme__texto__movil h1 {
-        font-size: 2em;
-    }
-}
-
+/* Secciones generales */
 .container__section {
     display: flex;
     flex-direction: column;
@@ -123,30 +58,20 @@ body {
     width: 100%;
     position: relative;
     height: auto;
-    /* Ajusta la altura automáticamente */
     gap: 3rem;
-    /* Espaciado entre elementos internos */
-
-    margin-bottom: .5rem;
-    /* Espacio entre esta sección y la siguiente */
+    margin-bottom: 0.5rem;
     background: inherit;
-    /* Mantiene el color de fondo alternado */
     box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.2);
-    /* Sombra hacia abajo */
     border-radius: 8px;
-    /* Bordes redondeados */
 }
 
 .container__section h1 {
     margin-top: 3rem;
-    /* Elimina márgenes superiores innecesarios */
     margin-bottom: 3rem;
-    /* Espacio entre el h1 y el siguiente elemento */
 }
 
 .container__section:last-of-type {
     margin-bottom: 0;
-    /* Elimina el margen inferior de la última sección */
 }
 
 .container__section img {
@@ -155,7 +80,7 @@ body {
     height: auto;
 }
 
-
+/* Contenedor de artículos */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -166,19 +91,13 @@ body {
     margin-bottom: 15rem;
 }
 
-.container article {
+.container__article {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     color: #666;
     font-size: 10px;
-
-}
-
-.article__text {
-    width: 80%;
-    text-align: center;
 }
 
 .container article img {
@@ -188,8 +107,41 @@ body {
     border-radius: 10%;
 }
 
+.container__article .article__img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
 
 
+
+.container__modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+dialog h2,
+p {
+    margin: 0;
+    width: 80%;
+    text-align: center;
+}
+
+
+
+.article__text {
+    width: 80%;
+    text-align: center;
+}
+
+
+
+/* Texto de patologías */
 .patologias__text {
     font-size: 1.2rem;
     text-align: start;
@@ -200,23 +152,13 @@ body {
 /* Alternar colores de fondo */
 .container__section:nth-child(odd) {
     background: #f4f4f4;
-    /* Color blanco */
 }
 
 .container__section:nth-child(even) {
     background: rgba(64, 224, 208, 0.2);
-    /* Color turquesa transparente */
 }
 
-#patologias h1 {
-    margin-bottom: 0;
-}
-
-/* Estilo para el checkbox (oculto) */
-.menu-toggle {
-    display: none;
-}
-
+/* Navbar */
 .navbar {
     flex-direction: column;
     justify-content: start;
@@ -235,7 +177,6 @@ body {
 }
 
 .navbar a {
-    
     text-decoration: none;
     font-size: 25px;
     height: 60px;
@@ -244,12 +185,10 @@ body {
     background-color: rgba(32, 178, 170);
     transition: background-color 0.3s ease;
     padding-top: 20px;
-    
 }
 
 .navbar a:hover {
     background-color: rgba(26, 140, 134);
-    
 }
 
 .navbar__header {
@@ -268,7 +207,6 @@ body {
     height: auto;
 }
 
-
 /* Fondo oscuro (overlay) */
 .overlay {
     position: fixed;
@@ -277,15 +215,17 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    /* Fondo oscuro semi-transparente */
     z-index: 2;
-    /* Asegúrate de que el overlay esté por encima del contenido */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
 
-/* Estilo para el ícono de hamburguesa */
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -295,38 +235,91 @@ body {
     z-index: 3;
 }
 
-/* Cuando el checkbox está marcado, se abre el menú */
-#menu-toggle:checked ~ .navbar {
+.menu-icon::before {
+    content: "☰";
+    font-size: 30px;
+}
+
+#menu-toggle:checked~.navbar {
     display: flex;
 }
 
-#menu-toggle:checked ~ .overlay {
+#menu-toggle:checked~.overlay {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease, visibility 0s 0s;
 }
 
-
-/* Mostrar el símbolo del menú hamburguesa por defecto */
-.menu-icon::before {
-    content: "☰"; /* Símbolo del menú hamburguesa */
-    font-size: 30px;
+#menu-toggle:checked+.menu-icon::before {
+    content: "✖";
+    color: white;
 }
 
-/* Cambiar el contenido a "X" cuando el menú está abierto */
-#menu-toggle:checked + .menu-icon::before {
-    content: "✖"; /* Cambia el símbolo del menú hamburguesa a una "X" */
-    color: white
+/* Oscurecer el fondo al abrir el modal */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo negro semi-transparente */
 }
 
+
+
+/* Media Queries */
 @media (max-width: 768px) {
+    .conoceme__texto__movil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        width: 100%;
+        color: black;
+        font-size: 1em;
+        background: #f4f4f4;
+        box-shadow: 9px 10px 10px -4px rgba(51, 50, 50, 0.363);
+    }
+
+    .conoceme__texto__movil div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin-bottom: 8rem;
+    }
+
+    .conoceme__texto {
+        color: white;
+        width: 80%;
+        text-align: center;
+    }
+
+    .conoceme__texto h1 {
+        font-size: 1.1em;
+    }
+
+    .conoceme__texto h2 {
+        font-size: 1em;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .conoceme__texto__movil p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .conoceme__texto__movil h1 {
+        font-size: 2em;
+    }
+
     .navbar {
         width: 100vw;
     }
+
     .overlay {
         visibility: hidden;
     }
 }
-
-
-
