@@ -1,0 +1,75 @@
+
+@media (max-width: 768px) {
+    .conoceme__texto__movil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        width: 100%;
+        color: black;
+        font-size: 1em;
+        background: rgba(64, 224, 208, 0.2);
+        box-shadow: 9px 10px 10px -4px rgba(51, 50, 50, 0.363);
+    }
+
+    .container__section:first-of-type {
+        gap: 0;
+        /* Elimina el espacio entre los elementos hijos de la primera sección */
+    }
+
+
+    .conoceme__texto__movil div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin-bottom: 8rem;
+    }
+
+    .conoceme__texto {
+        color: white;
+        width: 80%;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        text-align: center;
+    }
+
+    .conoceme__texto h1 {
+        font-size: 1.1em;
+    }
+
+    .conoceme__texto h2 {
+        font-size: 1em;
+
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .conoceme__texto__movil p {
+        font-size: 1.2em;
+        text-align: center;
+
+    }
+
+    .conoceme__texto__movil h1 {
+        font-size: 2em;
+    }
+
+    .navbar {
+        width: 100vw;
+    }
+    .overlay {
+        visibility: hidden;
+    }
+    .contact__form__container--inputs {
+        flex-direction: column;
+    }
+
+    .container__section {
+        text-align: center;
+    }
+}

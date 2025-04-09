@@ -1,3 +1,5 @@
+
+
 :root {
     width: 100%;
     box-sizing: border-box;
@@ -15,6 +17,113 @@ body {
     margin: 0;
     padding: 0;
     
+}
+
+/* Estilo para el checkbox (oculto) */
+.menu-toggle {
+    display: none;
+}
+
+.navbar {
+    flex-direction: column;
+    justify-content: start;
+    gap: 5rem;
+    text-align: center;
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(32, 178, 170);
+    z-index: 2;
+    overflow-x: hidden;
+    transition: 0.3s;
+    display: none;
+}
+
+.navbar a {
+    
+    text-decoration: none;
+    font-size: 25px;
+    height: 60px;
+    text-align: center;
+    color: white;
+    background-color: rgba(32, 178, 170);
+    transition: background-color 0.3s ease;
+    padding-top: 20px;
+    
+}
+
+.navbar a:hover {
+    background-color: rgba(26, 140, 134);
+    
+}
+
+.navbar__header {
+    padding-top: 15%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    font-size: 1em;
+    color: white;
+}
+
+.navbar__header img {
+    width: 30%;
+    height: auto;
+}
+
+
+/* Fondo oscuro (overlay) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo oscuro semi-transparente */
+    z-index: 2;
+    /* Asegúrate de que el overlay esté por encima del contenido */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Estilo para el ícono de hamburguesa */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+/* Cuando el checkbox está marcado, se abre el menú */
+#menu-toggle:checked ~ .navbar {
+    display: flex;
+}
+
+#menu-toggle:checked ~ .overlay {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+
+/* Mostrar el símbolo del menú hamburguesa por defecto */
+.menu-icon::before {
+    content: "☰"; /* Símbolo del menú hamburguesa */
+    font-size: 30px;
+}
+
+/* Cambiar el contenido a "X" cuando el menú está abierto */
+#menu-toggle:checked + .menu-icon::before {
+    content: "✖"; /* Cambia el símbolo del menú hamburguesa a una "X" */
+    color: white
 }
 
 .conoceme {
@@ -47,64 +156,7 @@ body {
 
 @media (max-width: 768px) {
 
-    .conoceme__texto__movil {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        width: 100%;
-        color: black;
-        font-size: 1em;
-        background: rgba(64, 224, 208, 0.2);
-        box-shadow: 9px 10px 10px -4px rgba(51, 50, 50, 0.363);
-    }
-
-    .container__section:first-of-type {
-        gap: 0;
-        /* Elimina el espacio entre los elementos hijos de la primera sección */
-    }
-
-
-    .conoceme__texto__movil div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 100%;
-        margin-bottom: 8rem;
-    }
-
-    .conoceme__texto {
-        color: white;
-        width: 80%;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        text-align: center;
-    }
-
-    .conoceme__texto h1 {
-        font-size: 1.1em;
-    }
-
-    .conoceme__texto h2 {
-        font-size: 1em;
-
-    }
-
-    .pc {
-        display: none;
-    }
-
-    .conoceme__texto__movil p {
-        font-size: 1.2em;
-        text-align: center;
-
-    }
-
-    .conoceme__texto__movil h1 {
-        font-size: 2em;
-    }
+    
 }
 
 .container__section {
@@ -113,7 +165,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: relative;
     height: auto;
     /* Ajusta la altura automáticamente */
     gap: 3rem;
@@ -234,120 +285,62 @@ dialog::backdrop {
     margin-bottom: 0;
 }
 
-/* Estilo para el checkbox (oculto) */
-.menu-toggle {
-    display: none;
-}
-
-.navbar {
-    flex-direction: column;
-    justify-content: start;
-    gap: 5rem;
-    text-align: center;
-    height: 100vh;
-    width: 20%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(32, 178, 170);
-    z-index: 2;
-    overflow-x: hidden;
-    transition: 0.3s;
-    display: none;
-}
-
-.navbar a {
-    
-    text-decoration: none;
-    font-size: 25px;
-    height: 60px;
-    text-align: center;
-    color: white;
-    background-color: rgba(32, 178, 170);
-    transition: background-color 0.3s ease;
-    padding-top: 20px;
-    
-}
-
-.navbar a:hover {
-    background-color: rgba(26, 140, 134);
-    
-}
-
-.navbar__header {
-    padding-top: 15%;
-    padding-left: 2%;
-    display: flex;
-    justify-content: space-evenly;
+.contact__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr ;
     align-items: center;
-    height: 10%;
-    font-size: 1em;
-    color: white;
+    justify-items: center;
+    width: 100%;
+    padding: 40px 0 0 40px;
+    
 }
 
-.navbar__header img {
-    width: 30%;
-    height: auto;
-}
-
-
-/* Fondo oscuro (overlay) */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Fondo oscuro semi-transparente */
-    z-index: 2;
-    /* Asegúrate de que el overlay esté por encima del contenido */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
-}
-
-/* Estilo para el ícono de hamburguesa */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 3;
-}
-
-/* Cuando el checkbox está marcado, se abre el menú */
-#menu-toggle:checked ~ .navbar {
+.contact__form__container--inputs {
     display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 50%;
 }
 
-#menu-toggle:checked ~ .overlay {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.3s ease, visibility 0s 0s;
+.contact__form__container--textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 50%;
 }
 
+.contact__form__container--inputs input[type="text"],
+.contact__form__container--inputs input[type="email"],
+.contact__form__container--textarea textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 0.35em;
+  padding: 0.75em 1em 0.75em 1em;
+  box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px rgba(0, 0, 0, 0.15);
 
-/* Mostrar el símbolo del menú hamburguesa por defecto */
-.menu-icon::before {
-    content: "☰"; /* Símbolo del menú hamburguesa */
-    font-size: 30px;
 }
 
-/* Cambiar el contenido a "X" cuando el menú está abierto */
-#menu-toggle:checked + .menu-icon::before {
-    content: "✖"; /* Cambia el símbolo del menú hamburguesa a una "X" */
-    color: white
+.contact__form__container--textarea textarea {
+    min-height: 14em;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        width: 100vw;
-    }
-    .overlay {
-        visibility: hidden;
-    }
+button {
+  border-radius: 0.35em;
+  color: #fff !important;
+  text-decoration: none;
+  padding: 0.75em 2.5em 0.75em 2.5em;
+  min-width: 100px;
+  width: 20%;
+  background-color: #035754;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 2em;
 }
 
 

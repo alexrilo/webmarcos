@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="responsive.css">
+    <title>Fisioterapia Marcos Blázquez</title>
 </head>
 
 <body>
@@ -104,7 +105,8 @@
                     <div class="container__modal">
                         <img src="images/terapiamanual.jpg" alt="Imagen de terapia manual" />
                         <h2 class="modal__title">TERAPIA MANUAL</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
+                            para tratar el dolor,
                             mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
                             musculares, nerviosas o disfunciones crónicas.</p>
                         <form method="dialog">
@@ -124,7 +126,8 @@
                     <div class="container__modal">
                         <img src="images/puncionseca.jpg" alt="Imagen de punción seca" />
                         <h2 class="modal__title">PUNCIÓN SECA</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
+                            para tratar el dolor,
                             mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
                             musculares, nerviosas o disfunciones crónicas.</p>
                         <form method="dialog">
@@ -134,7 +137,8 @@
                 </dialog>
             </article>
             <article class="container__article">
-                <img class="article__img" src="images/neuromodulacion.jpg" alt="Imagen de electropunción y neuromodulación"
+                <img class="article__img" src="images/neuromodulacion.jpg"
+                    alt="Imagen de electropunción y neuromodulación"
                     onclick="document.getElementById('electroNeuroModal').showModal()" />
                 <div class="article__text">
                     <h2>ELECTROPUNCIÓN Y NEUROMODULACIÓN</h2>
@@ -166,7 +170,8 @@
                     <div class="container__modal">
                         <img src="images/fisioterapia.jpg" alt="Imagen de ejercicio terapéutico" />
                         <h2 class="modal__title">EJERCICIO TERAPÉUTICO</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
+                            para tratar el dolor,
                             mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
                             musculares, nerviosas o disfunciones crónicas.</p>
                         <form method="dialog">
@@ -186,7 +191,8 @@
                     <div class="container__modal">
                         <img src="images/fisioterapiadeportiva.jpg" alt="Imagen de fisioterapia deportiva" />
                         <h2 class="modal__title">FISIOTERAPIA DEPORTIVA</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
+                            para tratar el dolor,
                             mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
                             musculares, nerviosas o disfunciones crónicas.</p>
                         <form method="dialog">
@@ -235,6 +241,22 @@
                 </div>
             </article>
         </div>
+    </section>
+    <section class="container__section" id="contacto">
+
+        <h1>CONTACTO</h1>
+        <p class="contact__text">Si quieres ponerte en contacto conmigo, puedes hacerlo a través de este formulario o
+            escribiéndome un correo a la dirección que aparece al final de la página.</p>
+        <form class="contact__form">
+            <div class="contact__form__container--inputs">
+                <input type="text" id="nombre" placeholder="Nombre" name="nombre" required />
+                <input type="email" id="email" placeholder="Email" name="email" required />
+            </div>
+            <div class="contact__form__container--textarea">
+                <textarea id="mensaje" placeholder="Mensaje" name="mensaje" rows="4" required></textarea>
+                <button class="contact__form__container--button" type="submit">Enviar</button>
+            </div>
+        </form>
     </section>
     <script src="index.js"></script>
 </body>
