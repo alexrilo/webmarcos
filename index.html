@@ -10,25 +10,24 @@
 
 <body>
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />        
+    <label for="menu-toggle" class="menu-icon">
+    </label> 
     <div class="overlay"></div>
-    <nav class="navbar">
-      
+    <nav class="navbar">     
         <div class="navbar__header">
             <img class="navbar__img" src="images/logo.jpg"/>
-            <p class="navbar__text"> Fisioterapia Marcos Blázquez</p>
         </div>        
-            <a href="#">Inicio</a>
             <a href="#conoceme">Ven a conocerme</a>
             <a href="#tratamientos">Tratamientos</a>
             <a href="#patologias">Patologías</a>
         </ul>
     </nav>
-    <section class="container__section">
+    <section id="conoceme" class="container__section">
         
         <div class="conoceme">
-            <label for="menu-toggle" class="menu-icon">
-                &#9776;
-            </label> 
+            
+            
+          
             <img src="images/marcos.png" alt="Fotografía Marcos Blázquez" />
             <div class="conoceme__texto">
                 <h1>Hola, soy Marcos </h1>
@@ -62,7 +61,7 @@
                     rendimiento, estaré encantado de ayudarte. </p>
             </div>
         </div>
-        <h1 id="conoceme">EXPERIENCIA PROFESIONAL</h1>
+        <h1 >EXPERIENCIA PROFESIONAL</h1>
         <div class="container">
             <article class="container__article">
                 <img src="images/triana.jpg" alt="Imagen de fisioterapia" />
@@ -164,6 +163,7 @@
             </article>
         </div>
     </section>
+    <script src="index.js"></script>
 </body>
 
 </html>

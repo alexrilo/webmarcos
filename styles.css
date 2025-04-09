@@ -1,6 +1,7 @@
 :root {
     width: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     margin: 0;
     top: 0;
     left: 0;
@@ -226,7 +227,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: lightseagreen;
+    background-color: rgba(32, 178, 170);
     z-index: 2;
     overflow-x: hidden;
     transition: 0.3s;
@@ -240,12 +241,15 @@ body {
     height: 60px;
     text-align: center;
     color: white;
-    transition: 0.3s;
+    background-color: rgba(32, 178, 170);
+    transition: background-color 0.3s ease;
+    padding-top: 20px;
+    
 }
 
 .navbar a:hover {
-    color: black;
-    background-color: white;
+    background-color: rgba(26, 140, 134);
+    
 }
 
 .navbar__header {
@@ -288,7 +292,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Cuando el checkbox está marcado, se abre el menú */
@@ -301,13 +305,26 @@ body {
     opacity: 1;
     transition: opacity 0.3s ease, visibility 0s 0s;
 }
-#menu-toggle:checked .menu-icon {
-    display: none;
+
+
+/* Mostrar el símbolo del menú hamburguesa por defecto */
+.menu-icon::before {
+    content: "☰"; /* Símbolo del menú hamburguesa */
+    font-size: 30px;
+}
+
+/* Cambiar el contenido a "X" cuando el menú está abierto */
+#menu-toggle:checked + .menu-icon::before {
+    content: "✖"; /* Cambia el símbolo del menú hamburguesa a una "X" */
+    color: white
 }
 
 @media (max-width: 768px) {
     .navbar {
         width: 100vw;
+    }
+    .overlay {
+        visibility: hidden;
     }
 }
 
