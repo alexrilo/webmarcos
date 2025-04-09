@@ -9,59 +9,60 @@
 </head>
 
 <body>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />        
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
     <label for="menu-toggle" class="menu-icon">
-    </label> 
+    </label>
     <div class="overlay"></div>
-    <nav class="navbar">     
+    <nav class="navbar">
         <div class="navbar__header">
-            <img class="navbar__img" src="images/logo.jpg"/>
-        </div>        
-            <a href="#conoceme">Ven a conocerme</a>
-            <a href="#tratamientos">Tratamientos</a>
-            <a href="#patologias">Patologías</a>
+            <img class="navbar__img" src="images/logo.jpg" />
+        </div>
+        <a href="#conoceme">Ven a conocerme</a>
+        <a href="#tratamientos">Tratamientos</a>
+        <a href="#patologias">Patologías</a>
         </ul>
     </nav>
     <section id="conoceme" class="container__section">
-        
+
         <div class="conoceme">
-            
-            
-          
+
+
+
             <img src="images/marcos.png" alt="Fotografía Marcos Blázquez" />
             <div class="conoceme__texto">
                 <h1>Hola, soy Marcos </h1>
-                <h2>Fisioterapeuta y osteópata.</h2>
+                <h2>Fisioterapeuta Especializado en
+                    Fisioterapia Manual y Deportiva.</h2>
                 <div class="pc">
-                    <p>Especializado en 
-                    Fisioterapia Manual y Deportiva. Desde siempre me ha apasionado el 
-                    deporte y la salud,</p> 
-                    <p>por lo que he enfocado mi profesión en poder ayudar a 
-                    las personas a conseguir una mejor calidad de vida sin dolor.</p> <p>Mi objetivo es 
-                    ofrecerte una atención individualizada, basada en una correcta valoración, 
-                    un tratamiento eficaz y un seguimiento continuo adaptado a tus 
-                    necesidades. </p>
-                    <p> Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú 
-                    rendimiento, estaré encantado de ayudarte. </p>
+                    <p> Desde siempre me ha apasionado el
+                        deporte y la salud,</p>
+                    <p>por lo que he enfocado mi profesión en poder ayudar a
+                        las personas a conseguir una mejor calidad de vida sin dolor.</p>
+                    <p>Mi objetivo es
+                        ofrecerte una atención individualizada, basada en una correcta valoración,
+                        un tratamiento eficaz y un seguimiento continuo adaptado a tus
+                        necesidades. </p>
+                    <p> Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú
+                        rendimiento, estaré encantado de ayudarte. </p>
                 </div>
             </div>
         </div>
         <div class="conoceme__texto__movil">
-            <h1>¿QUIEN SOY?</h1>
+            <h1>VEN A CONOCERME</h1>
             <div>
-                <p>Especializado en 
-                    Fisioterapia Manual y Deportiva. Desde siempre me ha apasionado el 
-                    deporte y la salud,</p> 
-                    <p>por lo que he enfocado mi profesión en poder ayudar a 
-                    las personas a conseguir una mejor calidad de vida sin dolor.</p> <p>Mi objetivo es 
-                    ofrecerte una atención individualizada, basada en una correcta valoración, 
-                    un tratamiento eficaz y un seguimiento continuo adaptado a tus 
+                <p>Desde siempre me ha apasionado el
+                    deporte y la salud,</p>
+                <p>por lo que he enfocado mi profesión en poder ayudar a
+                    las personas a conseguir una mejor calidad de vida sin dolor.</p>
+                <p>Mi objetivo es
+                    ofrecerte una atención individualizada, basada en una correcta valoración,
+                    un tratamiento eficaz y un seguimiento continuo adaptado a tus
                     necesidades. </p>
-                    <p> Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú 
+                <p> Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú
                     rendimiento, estaré encantado de ayudarte. </p>
             </div>
         </div>
-        <h1 >EXPERIENCIA PROFESIONAL</h1>
+        <h1>EXPERIENCIA PROFESIONAL</h1>
         <div class="container">
             <article class="container__article">
                 <img src="images/triana.jpg" alt="Imagen de fisioterapia" />
@@ -93,34 +94,106 @@
         <h1>TRATAMIENTOS</h1>
         <div class="container">
             <article class="container__article">
-                <img src="images/terapiamanual.jpg" alt="Imagen de terapia manual" />
+                <img class="article__img" src="images/terapiamanual.jpg" alt="Imagen de terapia manual"
+                    onclick="document.getElementById('terapiaManualModal').showModal()" />
                 <div class="article__text">
                     <h2>TERAPIA MANUAL</h2>
                 </div>
+                <!-- Modal con <dialog> -->
+                <dialog id="terapiaManualModal">
+                    <div class="container__modal">
+                        <img src="images/terapiamanual.jpg" alt="Imagen de terapia manual" />
+                        <h2 class="modal__title">TERAPIA MANUAL</h2>
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
+                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <form method="dialog">
+                            <button class="close-btn">Cerrar</button>
+                        </form>
+                    </div>
+                </dialog>
             </article>
             <article class="container__article">
-                <img src="images/puncionseca.jpg" alt="Imagen de punción seca" />
+                <img class="article__img" src="images/puncionseca.jpg" alt="Imagen de punción seca"
+                    onclick="document.getElementById('puncionSecaModal').showModal()" />
                 <div class="article__text">
                     <h2>PUNCIÓN SECA</h2>
                 </div>
+                <!-- Modal con <dialog> -->
+                <dialog id="puncionSecaModal">
+                    <div class="container__modal">
+                        <img src="images/puncionseca.jpg" alt="Imagen de punción seca" />
+                        <h2 class="modal__title">PUNCIÓN SECA</h2>
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
+                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <form method="dialog">
+                            <button class="close-btn">Cerrar</button>
+                        </form>
+                    </div>
+                </dialog>
             </article>
             <article class="container__article">
-                <img src="images/neuromodulacion.jpg" alt="Imagen de electropunción y neuromodulación" />
+                <img class="article__img" src="images/neuromodulacion.jpg" alt="Imagen de electropunción y neuromodulación"
+                    onclick="document.getElementById('electroNeuroModal').showModal()" />
                 <div class="article__text">
                     <h2>ELECTROPUNCIÓN Y NEUROMODULACIÓN</h2>
                 </div>
+                <!-- Modal con <dialog> -->
+                <dialog id="electroNeuroModal">
+                    <div class="container__modal">
+                        <img src="images/neuromodulacion.jpg" alt="Imagen de electropunción y neuromodulación" />
+                        <h2 class="modal__title">ELECTROPUNCIÓN Y NEUROMODULACIÓN</h2>
+                        <p class="modal__description">
+                            Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
+                            musculares, nerviosas o disfunciones crónicas.
+                        </p>
+                        <form method="dialog">
+                            <button class="close-btn">Cerrar</button>
+                        </form>
+                    </div>
+                </dialog>
             </article>
             <article class="container__article">
-                <img src="images/fisioterapia.jpg" alt="Imagen de ejercicio terapéutico" />
+                <img class="article__img" src="images/fisioterapia.jpg" alt="Imagen de ejercicio terapéutico"
+                    onclick="document.getElementById('ejercicioTerapeuticoModal').showModal()" />
                 <div class="article__text">
                     <h2>EJERCICIO TERAPÉUTICO</h2>
                 </div>
+                <!-- Modal con <dialog> -->
+                <dialog id="ejercicioTerapeuticoModal">
+                    <div class="container__modal">
+                        <img src="images/fisioterapia.jpg" alt="Imagen de ejercicio terapéutico" />
+                        <h2 class="modal__title">EJERCICIO TERAPÉUTICO</h2>
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
+                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <form method="dialog">
+                            <button class="close-btn">Cerrar</button>
+                        </form>
+                    </div>
+                </dialog>
             </article>
             <article class="container__article">
-                <img src="images/fisioterapiadeportiva.jpg" alt="Imagen de fisioterapia deportiva" />
+                <img class="article__img" src="images/fisioterapiadeportiva.jpg" alt="Imagen de fisioterapia deportiva"
+                    onclick="document.getElementById('fisioterapiaDeportivaModal').showModal()" />
                 <div class="article__text">
                     <h2>FISIOTERAPIA DEPORTIVA</h2>
                 </div>
+                <!-- Modal con <dialog> -->
+                <dialog id="fisioterapiaDeportivaModal">
+                    <div class="container__modal">
+                        <img src="images/fisioterapiadeportiva.jpg" alt="Imagen de fisioterapia deportiva" />
+                        <h2 class="modal__title">FISIOTERAPIA DEPORTIVA</h2>
+                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
+                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
+                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <form method="dialog">
+                            <button class="close-btn">Cerrar</button>
+                        </form>
+                    </div>
+                </dialog>
             </article>
         </div>
     </section>

@@ -3,10 +3,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 0;
 }
 
@@ -17,10 +13,6 @@ body {
     align-items: start;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 0;
     
 }
@@ -64,7 +56,7 @@ body {
         width: 100%;
         color: black;
         font-size: 1em;
-        background: #f4f4f4;
+        background: rgba(64, 224, 208, 0.2);
         box-shadow: 9px 10px 10px -4px rgba(51, 50, 50, 0.363);
     }
 
@@ -176,6 +168,15 @@ body {
 
 }
 
+.article__img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.article__img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 .article__text {
     width: 80%;
     text-align: center;
@@ -186,6 +187,27 @@ body {
     max-width: 200px;
     height: 200px;
     border-radius: 10%;
+}
+
+.container__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    gap: .5em;
+}
+
+.modal__title, .modal__description {
+    width: 80%;
+    margin: 0;
+    text-align: center;
+}
+
+/* Oscurecer el fondo al abrir el modal */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo negro semi-transparente */
 }
 
 
