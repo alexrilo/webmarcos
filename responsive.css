@@ -65,11 +65,16 @@
     .overlay {
         visibility: hidden;
     }
-    .contact__form__container--inputs {
+    .contact__form__container--inputs, .contact__form__container--textarea {
         flex-direction: column;
+        width: 50%;
     }
 
     .container__section {
         text-align: center;
+    }
+
+    button {
+        width: 80%;
     }
 }

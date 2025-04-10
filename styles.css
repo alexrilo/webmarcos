@@ -158,11 +158,6 @@ body.no-scroll {
     display: none;
 }
 
-@media (max-width: 768px) {
-
-    
-}
-
 .container__section {
     display: flex;
     flex-direction: column;
@@ -203,6 +198,44 @@ body.no-scroll {
 }
 
 
+.accordion-content {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.4s ease, opacity 0.4s ease;
+    padding: 0 1rem;
+    background-color: rgba(64, 224, 208, 0.2);
+    border-radius: 0.35em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+.accordion-content.open {
+    opacity: 1;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+.accordion-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.accordion-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.accordion-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+    display: inline-block;
+}
+.accordion-button.open .accordion-arrow {
+    transform: rotate(180deg); /* Gira la flecha hacia arriba */
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -210,7 +243,7 @@ body.no-scroll {
     width: 100%;
     max-width: 100%;
     gap: 2rem;
-    margin-bottom: 15rem;
+    margin-bottom: 8rem;
 }
 
 .container article {
@@ -250,7 +283,13 @@ body.no-scroll {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    gap: .5em;
+    gap: .5em;    
+}
+
+dialog {
+    background: rgba(64, 224, 208, 1);
+    border: 0;
+    border-radius: 0.5em;
 }
 
 .modal__title, .modal__description {
@@ -295,25 +334,18 @@ dialog::backdrop {
     grid-template-rows: .5fr 1fr ;
     align-items: center;
     justify-items: center;
+    width: 80%;
+    max-width: 1000px;
+    gap: 1em;
+    
+    
+}
+
+.contact__form__container--inputs, .contact__form__container--textarea {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
     width: 100%;
-    
-    
-}
-
-.contact__form__container--inputs {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    width: 50%;
-}
-
-.contact__form__container--textarea {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    width: 50%;
 }
 
 .contact__form__container--inputs input[type="text"],
@@ -339,7 +371,7 @@ button {
   color: #fff !important;
   text-decoration: none;
   padding: 0.75em 2.5em 0.75em 2.5em;
-  min-width: 100px;
+  min-width: 300px;
   width: 20%;
   background-color: #035754;
   border: 0;

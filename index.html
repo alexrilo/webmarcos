@@ -90,6 +90,26 @@
                     <h2>FISIOTERAPIA A DOMICILIO</h2>
                 </div>
             </article>
+
+        </div>
+        <button class="accordion-button" id="toggleFormaciones">FORMACIÓN PROFESIONAL <span
+                class="accordion-arrow">&#9660;</span> </button>
+        <div class="accordion-content" id="formacionesContent">
+            <ul>
+                <li><strong>CURSO: TRATAMIENTO DE LAS TENDINOPATÍAS EN MMII</strong></li>
+                <li><strong>CURSO: ABORDAJE DE TENDINOPATÍAS EN MMSS</strong></li>
+                <li><strong>CURSO: PROGRAMA FORMATIVO DE ACTUALIZACIÓN EN EJERCICIO TERAPÉUTICO</strong></li>
+                <li><strong>CURSO: ENFOQUE FISIOTERÁPICO EN EL DIAGNÓSTICO Y TRATAMIENTO DE LAS PATOLOGÍAS DE LA ATM</strong></li>
+                <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA EN PROCESOS ONCOLÓGICOS</strong></li>
+                <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN REHABILITACIÓN Y FISIOTERAPIA EN GERIATRIA</strong></li>
+                <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA CARDIO-RESPIRATORIA</strong></li>
+                <li><strong>CURSO: PILATES TERAPÉUTICO</strong></li>
+                <li><strong>CURSO THRUST´N GO</strong></li>
+                <li><strong>TÍTULO DE TÉCNICO SUPERIOR EN IMAGEN PARA EL DIAGNÓSTICO Y MEDICINA NUCLEAR</strong></li>
+                <li><strong>GRADUADO EN FISIOTERAPIA EN LA UNIVERSIDAD DE SEVILLA EN 2021</strong></li>
+                <li><strong>MÁSTER UNIVERSITARIO EN FISIOTERAPIA MANUAL DEL APARATO LOCOMOTOR</strong></li>
+                <li><strong>EXPERTO UNIVERSITARIO EN FISIOTERAPIA PARA LA PRÁCTICA DEPORTIVA</strong></li>
+            </ul>
         </div>
     </section>
     <section class="container__section" id="tratamientos">
@@ -254,11 +274,12 @@
                 <input type="email" id="email" placeholder="Email" name="email" required />
             </div>
             <div class="contact__form__container--textarea">
-                <textarea id="mensaje" placeholder="Mensaje" name="mensaje" rows="4" required></textarea>
-                <button class="contact__form__container--button" type="submit">Enviar</button>
+                <textarea id="mensaje" placeholder="Mensaje" name="mensaje" required></textarea>
             </div>
+            <button class="contact__form__container--button" type="submit">Enviar</button>
         </form>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="index.js"></script>
 </body>
 
