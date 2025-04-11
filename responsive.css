@@ -1,6 +1,6 @@
 
 @media (max-width: 768px) {
-    .conoceme__texto__movil {
+    .conoceme__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,7 +19,7 @@
     }
 
 
-    .conoceme__texto__movil div {
+    .conoceme__texto div {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -29,18 +29,18 @@
         margin-bottom: 8rem;
     }
 
-    .conoceme__texto {
+    .header__texto {
         color: white;
         width: 80%;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         text-align: center;
     }
 
-    .conoceme__texto h1 {
+    .header__texto h1 {
         font-size: 1.1em;
     }
 
-    .conoceme__texto h2 {
+    .header__texto h2 {
         font-size: 1em;
 
     }
@@ -49,13 +49,13 @@
         display: none;
     }
 
-    .conoceme__texto__movil p {
-        font-size: 1.2em;
+    .conoceme__texto p {
+        font-size: 1em;
         text-align: center;
 
     }
 
-    .conoceme__texto__movil h1 {
+    .conoceme__container h1 {
         font-size: 2em;
     }
 
@@ -74,7 +74,34 @@
         text-align: center;
     }
 
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+        max-width: 100%;
+        gap: 2rem;
+        margin-bottom: 8rem;
+    }
+    
+
+    .container__description {
+        padding: 0;
+        margin: 0;
+        width: 80%;
+    }
+
     button {
         width: 80%;
     }
+
+    dialog {
+        width: 100%;
+    
+    }
+
+    .patologias__text {
+        text-align: center;
+    }
+    
 }

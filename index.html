@@ -31,27 +31,17 @@
 
 
             <img src="images/marcos.png" alt="Fotografía Marcos Blázquez" />
-            <div class="conoceme__texto">
+            <div class="header__texto">
                 <h1>Hola, soy Marcos </h1>
                 <h2>Fisioterapeuta Especializado en
                     Fisioterapia Manual y Deportiva.</h2>
-                <div class="pc">
-                    <p> Desde siempre me ha apasionado el
-                        deporte y la salud,</p>
-                    <p>por lo que he enfocado mi profesión en poder ayudar a
-                        las personas a conseguir una mejor calidad de vida sin dolor.</p>
-                    <p>Mi objetivo es
-                        ofrecerte una atención individualizada, basada en una correcta valoración,
-                        un tratamiento eficaz y un seguimiento continuo adaptado a tus
-                        necesidades. </p>
-                    <p> Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú
-                        rendimiento, estaré encantado de ayudarte. </p>
-                </div>
             </div>
+
         </div>
-        <div class="conoceme__texto__movil">
+        <div class="conoceme__container">
             <h1>VEN A CONOCERME</h1>
-            <div>
+            <div class="conoceme__texto">
+
                 <p>Desde siempre me ha apasionado el
                     deporte y la salud,</p>
                 <p>por lo que he enfocado mi profesión en poder ayudar a
@@ -62,6 +52,29 @@
                     necesidades. </p>
                 <p> Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú
                     rendimiento, estaré encantado de ayudarte. </p>
+            </div>
+            <button class="accordion-button" id="toggleFormaciones">FORMACIÓN ACADÉMICA <span
+                    class="accordion-arrow">&#9660;</span> </button>
+            <div class="accordion-content" id="formacionesContent">
+                <ul>
+                    <li><strong>TÍTULO DE TÉCNICO SUPERIOR EN IMAGEN PARA EL DIAGNÓSTICO Y MEDICINA NUCLEAR</strong>
+                    </li>
+                    <li><strong>GRADUADO EN FISIOTERAPIA EN LA UNIVERSIDAD DE SEVILLA EN 2021</strong></li>
+                    <li><strong>MÁSTER UNIVERSITARIO EN FISIOTERAPIA MANUAL DEL APARATO LOCOMOTOR</strong></li>
+                    <li><strong>EXPERTO UNIVERSITARIO EN FISIOTERAPIA PARA LA PRÁCTICA DEPORTIVA</strong></li>
+                    <li><strong>CURSO: TRATAMIENTO DE LAS TENDINOPATÍAS EN MMII</strong></li>
+                    <li><strong>CURSO: ABORDAJE DE TENDINOPATÍAS EN MMSS</strong></li>
+                    <li><strong>CURSO: PROGRAMA FORMATIVO DE ACTUALIZACIÓN EN EJERCICIO TERAPÉUTICO</strong></li>
+                    <li><strong>CURSO: ENFOQUE FISIOTERÁPICO EN EL DIAGNÓSTICO Y TRATAMIENTO DE LAS PATOLOGÍAS DE LA
+                            ATM</strong></li>
+                    <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA EN PROCESOS ONCOLÓGICOS</strong>
+                    </li>
+                    <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN REHABILITACIÓN Y FISIOTERAPIA EN
+                            GERIATRIA</strong></li>
+                    <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA CARDIO-RESPIRATORIA</strong></li>
+                    <li><strong>CURSO: PILATES TERAPÉUTICO</strong></li>
+                    <li><strong>CURSO THRUST´N GO</strong></li>
+                </ul>
             </div>
         </div>
         <h1>EXPERIENCIA PROFESIONAL</h1>
@@ -85,35 +98,18 @@
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/domicilio.png" alt="Imagen de fisioterapia" />
+                <img src="images/logo.jpg" alt="Imagen de fisioterapia" />
                 <div class="article__text">
                     <h2>FISIOTERAPIA A DOMICILIO</h2>
                 </div>
             </article>
 
         </div>
-        <button class="accordion-button" id="toggleFormaciones">FORMACIÓN PROFESIONAL <span
-                class="accordion-arrow">&#9660;</span> </button>
-        <div class="accordion-content" id="formacionesContent">
-            <ul>
-                <li><strong>CURSO: TRATAMIENTO DE LAS TENDINOPATÍAS EN MMII</strong></li>
-                <li><strong>CURSO: ABORDAJE DE TENDINOPATÍAS EN MMSS</strong></li>
-                <li><strong>CURSO: PROGRAMA FORMATIVO DE ACTUALIZACIÓN EN EJERCICIO TERAPÉUTICO</strong></li>
-                <li><strong>CURSO: ENFOQUE FISIOTERÁPICO EN EL DIAGNÓSTICO Y TRATAMIENTO DE LAS PATOLOGÍAS DE LA ATM</strong></li>
-                <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA EN PROCESOS ONCOLÓGICOS</strong></li>
-                <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN REHABILITACIÓN Y FISIOTERAPIA EN GERIATRIA</strong></li>
-                <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA CARDIO-RESPIRATORIA</strong></li>
-                <li><strong>CURSO: PILATES TERAPÉUTICO</strong></li>
-                <li><strong>CURSO THRUST´N GO</strong></li>
-                <li><strong>TÍTULO DE TÉCNICO SUPERIOR EN IMAGEN PARA EL DIAGNÓSTICO Y MEDICINA NUCLEAR</strong></li>
-                <li><strong>GRADUADO EN FISIOTERAPIA EN LA UNIVERSIDAD DE SEVILLA EN 2021</strong></li>
-                <li><strong>MÁSTER UNIVERSITARIO EN FISIOTERAPIA MANUAL DEL APARATO LOCOMOTOR</strong></li>
-                <li><strong>EXPERTO UNIVERSITARIO EN FISIOTERAPIA PARA LA PRÁCTICA DEPORTIVA</strong></li>
-            </ul>
-        </div>
+
     </section>
     <section class="container__section" id="tratamientos">
         <h1>TRATAMIENTOS</h1>
+        <p class="container__description">Haz click en las imágenes para ver más sobre las técnicas</p>
         <div class="container">
             <article class="container__article">
                 <img class="article__img" src="images/terapiamanual.jpg" alt="Imagen de terapia manual"
@@ -126,10 +122,15 @@
                     <div class="container__modal">
                         <img src="images/terapiamanual.jpg" alt="Imagen de terapia manual" />
                         <h2 class="modal__title">TERAPIA MANUAL</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
-                            para tratar el dolor,
-                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
-                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <p class="modal__description">Es una técnica de la fisioterapia en la que el profesional utiliza
+                            las manos
+                            para tratar distintas alteraciones del sistema musculoesquelético ,entre ellas, podemos
+                            destacar los masajes terapéuticos (masoterapia), movilizaciones articulares , manipulaciones
+                            articulares (thrust), etc. Con esta técnica conseguiremos estimular el flujo sanguíneo,
+                            disminuir
+                            el dolor, recuperar la movilidad de las articulaciones y por tanto, mejorar la funcionalidad
+                            del
+                            paciente.</p>
                         <form method="dialog">
                             <button class="close-btn">Cerrar</button>
                         </form>
@@ -147,10 +148,12 @@
                     <div class="container__modal">
                         <img src="images/puncionseca.jpg" alt="Imagen de punción seca" />
                         <h2 class="modal__title">PUNCIÓN SECA</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
-                            para tratar el dolor,
-                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
-                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <p class="modal__description">Es una técnica que utilizamos en fisioterapia que consiste en
+                            introducir
+                            agujas muy finas, similares a las de acupuntura, justo en el punto donde se acumula tensión
+                            o
+                            donde se forma una “contractura”. Se utiliza para disminuir la tensión muscular, reducir el
+                            dolor y favorecer la regeneración del tejido.</p>
                         <form method="dialog">
                             <button class="close-btn">Cerrar</button>
                         </form>
@@ -170,9 +173,12 @@
                         <img src="images/neuromodulacion.jpg" alt="Imagen de electropunción y neuromodulación" />
                         <h2 class="modal__title">ELECTROPUNCIÓN Y NEUROMODULACIÓN</h2>
                         <p class="modal__description">
-                            Técnicas avanzadas que combinan estimulación eléctrica con agujas para tratar el dolor,
-                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
-                            musculares, nerviosas o disfunciones crónicas.
+                            La electropunción es una técnica que se realiza combinando agujas de acupuntura con
+                            impulsos eléctricos. Por otro lado, la neuromodulación utiliza los impulsos eléctricos para
+                            modificar la manera en que los nervios envían la información, lo que ayuda a reducir el
+                            dolor
+                            crónico. Por lo tanto, ambas son técnicas avanzadas de fisioterapia que se utilizan para
+                            mejorar la función neuromuscular y disminuir el dolor.
                         </p>
                         <form method="dialog">
                             <button class="close-btn">Cerrar</button>
@@ -191,10 +197,15 @@
                     <div class="container__modal">
                         <img src="images/fisioterapia.jpg" alt="Imagen de ejercicio terapéutico" />
                         <h2 class="modal__title">EJERCICIO TERAPÉUTICO</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
-                            para tratar el dolor,
-                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
-                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <p class="modal__description">Es una parte importante del tratamiento en fisioterapia, ya que
+                            favorece una mejor
+                            recuperación tras una lesión. Además, está demostrado que ayuda a las personas que
+                            presentan dolor crónico. Consiste en ejercicios planificados y adaptados a cada individuo
+                            para
+                            reducir el dolor de forma progresiva, disminuir la rigidez articular y muscular, y activar
+                            el
+                            sistema nervioso para regular la sensibilidad al dolor, especialmente, en pacientes de larga
+                            evolución.</p>
                         <form method="dialog">
                             <button class="close-btn">Cerrar</button>
                         </form>
@@ -212,10 +223,14 @@
                     <div class="container__modal">
                         <img src="images/fisioterapiadeportiva.jpg" alt="Imagen de fisioterapia deportiva" />
                         <h2 class="modal__title">FISIOTERAPIA DEPORTIVA</h2>
-                        <p class="modal__description">Técnicas avanzadas que combinan estimulación eléctrica con agujas
-                            para tratar el dolor,
-                            mejorar la función neuromuscular y acelerar la recuperación. Ideales para lesiones
-                            musculares, nerviosas o disfunciones crónicas.</p>
+                        <p class="modal__description">Es una especialidad de la fisioterapia que utiliza diferentes
+                            técnicas para recuperar a las personas que sufren lesiones derivadas del deporte. Se
+                            utilizan
+                            diferentes tratamientos, aunque podemos destacar la utilización de vendajes, como el
+                            kinesiotape y el vendaje funcional, que se pueden utilizar para modificar las sensaciones
+                            del
+                            deportista o limitar ciertos movimientos dolorosos para conseguir una mejor recuperación.
+                        </p>
                         <form method="dialog">
                             <button class="close-btn">Cerrar</button>
                         </form>
@@ -227,41 +242,55 @@
     <section class="container__section" id="patologias">
         <h1>PATOLOGÍAS</h1>
         <p class="patologias__text">
-            Abordaré diferentes problemas de salud, especialmente,
-            patologías neuromusculoesqueléticas,
-            entre ellas podremos destacar:
+            Abordo una amplia variedad de problemas de salud, con especial atención, a las patologías
+            neuromusculoesqueléticas. Algunas de las más frecuentes son:
         </p>
         <div class="container">
             <article class="container__article">
                 <img src="images/dolor_lumbar.jpg" alt="Imagen de terapia manual" />
                 <div class="article__text">
-                    <h2>PROBLEMAS DE ESPALDA: CERVICALGIA, DORSALGIA, LUMBALGIA, CIÁTICAS, CERVICOBRAQUIALGIA</h2>
+                    <h2>DOLOR DE ESPALDA: CERVICALGIA, DORSALGIA, LUMBALGIA, CIÁTICA, CERVICOBRAQUIALGIA, ENTRE OTRAS.
+                    </h2>
                 </div>
             </article>
             <article class="container__article">
                 <img src="images/bruxismo.jpg" alt="Imagen de punción seca" />
                 <div class="article__text">
-                    <h2>PROBLEMAS EN LA ARTICULACIÓN TEMPOROMANDIBULAR ATM (BRUXISMO), PROBLEMAS MENISCALES, ETC</h2>
+                    <h2>DISFUNCIONES DE LA ARTICULACIÓN TEMPOROMANDIBULAR (ATM).</h2>
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/lca.webp" alt="Imagen de electropunción y neuromodulación" />
+                <img src="images/lca.webp" alt="IMAGEN DE ELECTROPUNCIÓN Y NEUROMODULACIÓN" />
                 <div class="article__text">
-                    <h2>LESIONES DEPORTIVAS: TENDINOPATÍAS (CODO DE TENISTA, CODO DE GOLFISTA, ROTULIANO, AQUÍLEO),
-                        ESGUINCES, FASCITIS PLANTAR, ROTURA DE LCA</h2>
+                    <h2>DOLOR DE HOMBRO (OMALGIAS): CAPSULITIS ADHESIVA (HOMBRO CONGELADO), TENDINOPATÍAS
+                        DEL MANGUITO ROTADOR, LUXACIÓN GLENOHUMERAL, SÍNDROME SUBACROMIAL, ETC.</h2>
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/oncologia.jpg" alt="Imagen de ejercicio terapéutico" />
-                <h2>PATOLOGÍAS ONCOLÓGICAS</h2>
+                <img src="images/lca.webp" alt="Imagen de ejercicio terapéutico" />
+                <div class="article__text">
+                    <h2>LESIONES DEPORTIVAS: ESGUINCES, TENDINOPATÍAS (CODO DE TENISTA, CODO DE GOLFISTA,
+                        ROTULIANA, AQUÍLEA), FASCITIS PLANTAR, ROTURAS DE LIGAMENTOS CRUZADOS (LCA, LCP).</h2>
+                </div>
             </article>
             <article class="container__article">
                 <img src="images/geriatricos.jpg" alt="Imagen de fisioterapia deportiva" />
                 <div class="article__text">
-                    <h2>PACIENTES GERIÁTRICOS</h2>
+                    <h2>PATOLOGÍAS GERIÁTRICAS</h2>
+                </div>
+            </article>
+            <article class="container__article">
+                <img src="images/oncologia.jpg" alt="Imagen de fisioterapia deportiva" />
+                <div class="article__text">
+                    <h2>PATOLOGÍAS ONCOLÓGICAS</h2>
                 </div>
             </article>
         </div>
+        <p class="patologias__text">
+            Si tu caso no encaja exactamente con alguna de estas patologías, no dudes en contactar
+            conmigo. Si no puedo ayudarte directamente, haré lo posible por derivarte al profesional
+            adecuado para que recibas la mejor atención posible.
+        </p>
     </section>
     <section class="container__section" id="contacto">
 
