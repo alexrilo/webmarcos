@@ -29,6 +29,7 @@ body.no-scroll {
 .navbar {
     flex-direction: column;
     justify-content: start;
+    align-items: center;
     gap: 5rem;
     text-align: center;
     height: 100vh;
@@ -53,6 +54,7 @@ body.no-scroll {
     background-color: rgba(32, 178, 170);
     transition: background-color 0.3s ease;
     padding-top: 20px;
+    width: 100%;
 
 }
 
@@ -298,7 +300,7 @@ body.no-scroll {
 
 .article__text {
     width: 50%;
-    
+
     text-align: center;
 }
 
@@ -400,6 +402,46 @@ dialog::backdrop {
 .contact__form__container--textarea textarea {
     min-height: 14em;
 }
+
+.container__social__icons {
+    width: 80%;
+    margin-bottom: 2em;
+}
+
+.icons__socials {
+    display: flex;
+    gap: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+
+}
+
+.icons__socials a {
+    color: #333;
+    /* o el color que prefieras */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.icons__socials a:hover {
+    color: #035754;
+    background-color: rgba(32, 178, 170);
+    /* o el color que quieras al pasar el cursor */
+}
+ 
+
+ 
+.icons__socials.footer li a:hover {
+    
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
 
 button {
     border-radius: 0.35em;

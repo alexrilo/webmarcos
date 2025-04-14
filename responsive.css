@@ -67,7 +67,11 @@
     }
     .contact__form__container--inputs, .contact__form__container--textarea {
         flex-direction: column;
-        width: 50%;
+        width: 80%;
+    }
+
+    .contact__text {
+        width: 80%;
     }
 
     .container__section {
@@ -103,5 +107,13 @@
     .patologias__text {
         text-align: center;
     }
+    
+    .container__socials__icons {
+        width: 50%;
+        
+    }
+
+    
+
     
 }
