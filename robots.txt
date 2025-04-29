@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://fisioterapiamarcosblazquez.netlify.app/sitemap.xml

@@ -32,8 +32,10 @@
     .header__texto {
         color: white;
         width: 80%;
+        font-size: 1.2em;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         text-align: center;
+        margin-top: 0;
     }
 
     .header__texto h1 {
@@ -43,6 +45,10 @@
     .header__texto h2 {
         font-size: 1em;
 
+    }
+
+    .header__texto h3 {
+        font-size: 0.8em;
     }
 
     .pc {

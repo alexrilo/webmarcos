@@ -3,7 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="Fisioterapia profesional a domicilio en Torrejón y Corredor del Henares. Sesiones individuales, bonos, y pilates terapéutico.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fisioterapiamarcosblazquez.netlify.app/">
+    <!-- Open Graph (para Facebook, WhatsApp...) -->
+    <meta property="og:title" content="Fisioterapia Marcos Blázquez">
+    <meta property="og:description"
+        content="Fisioterapia profesional a domicilio en Torrejón y Corredor del Henares. Tratamientos personalizados y pilates terapéutico.">
+    <meta property="og:image" content="https://fisioterapiamarcosblazquez.netlify.app/images/logo.webp">
+    <meta property="og:url" content="https://fisioterapiamarcosblazquez.netlify.app/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fisioterapia Marcos Blázquez">
+    <meta name="twitter:description"
+        content="Servicios de fisioterapia y pilates a domicilio en Torrejón y alrededores.">
+    <meta name="twitter:image" content="https://fisioterapiamarcosblazquez.netlify.app/images/logo.webp">
+
+    <!-- Datos estructurados (Schema.org) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fisioterapia Marcos Blázquez",
+    "image": "https://fisioterapiamarcosblazquez.netlify.app/images/logo.webp",
+    "url": "https://fisioterapiamarcosblazquez.netlify.app",
+    "telephone": "+34 681852033",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Torrejón de Ardoz",
+      "addressCountry": "ES"
+    },
+    "description": "Fisioterapeuta especializado en tratamientos manuales, deportivos y pilates terapéutico a domicilio en Torrejón y Corredor del Henares."
+  }
+  </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -17,7 +53,7 @@
     <div class="overlay"></div>
     <nav class="navbar">
         <div class="navbar__header">
-            <img class="navbar__img" src="images/logo.jpg" />
+            <img class="navbar__img" src="images/logo.webp" />
         </div>
         <a href="#conoceme">Ven a conocerme</a>
         <a href="#tratamientos">Tratamientos</a>
@@ -36,14 +72,15 @@
     <section id="conoceme" class="container__section">
 
         <div class="conoceme">
-
-
-
-            <img src="images/marcos.png" alt="Fotografía Marcos Blázquez" />
+            <img src="images/marcos.webp" alt="Fotografía Marcos Blázquez" />
             <div class="header__texto">
-                <h1>Hola, soy Marcos </h1>
-                <h2>Fisioterapeuta Especializado en
-                    Fisioterapia Manual y Deportiva.</h2>
+                <h1>FISIOTERAPIA A DOMICILIO </h1>
+                <div class="lema">
+                <h2>Especializado en
+                    Fisioterapia Manual y Deportiva</h2>                
+                    <h3>"Cuidate y vive sin dolor"</h3>
+                </div>
+                
             </div>
 
         </div>
@@ -89,25 +126,25 @@
         <h1>EXPERIENCIA PROFESIONAL</h1>
         <div class="container">
             <article class="container__article">
-                <img src="images/triana.jpg" alt="Imagen de fisioterapia" />
+                <img src="images/triana.webp" alt="Imagen de fisioterapia" />
                 <div class="article__text">
                     <h2>FISIOTERAPEUTA TRIANA CLUB DE FÚTBOL TEMPORADA 2021-2022</h2>
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/naya.png" alt="Imagen de fisioterapia" />
+                <img src="images/naya.webp" alt="Imagen de fisioterapia" />
                 <div class="article__text">
                     <h2>FISIOTERAPEUTA A.D. NAYA TEMPORADA 2023-ACTUALMENTE
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/encadenate.png" alt="Imagen de fisioterapia" />
+                <img src="images/encadenate.webp" alt="Imagen de fisioterapia" />
                 <div class="article__text">
                     <h2>ENCADENATE S.L. (TORREJÓN DE ARDOZ)
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/logo.jpg" alt="Imagen de fisioterapia" />
+                <img src="images/logo.webp" alt="Imagen de fisioterapia" />
                 <div class="article__text">
                     <h2>FISIOTERAPIA A DOMICILIO</h2>
                 </div>
@@ -121,7 +158,7 @@
         <p class="container__description">Haz click en las imágenes para ver más sobre las técnicas</p>
         <div class="container">
             <article class="container__article">
-                <img class="article__img" src="images/terapiamanual.jpg" alt="Imagen de terapia manual"
+                <img class="article__img" src="images/terapiamanual.webp" alt="Imagen de terapia manual"
                     onclick="document.getElementById('terapiaManualModal').showModal()" />
                 <div class="article__text">
                     <h2>TERAPIA MANUAL</h2>
@@ -129,7 +166,7 @@
                 <!-- Modal con <dialog> -->
                 <dialog id="terapiaManualModal">
                     <div class="container__modal">
-                        <img src="images/terapiamanual.jpg" alt="Imagen de terapia manual" />
+                        <img src="images/terapiamanual.webp" alt="Imagen de terapia manual" />
                         <h2 class="modal__title">TERAPIA MANUAL</h2>
                         <p class="modal__description">Es una técnica de la fisioterapia en la que el profesional utiliza
                             las manos
@@ -147,7 +184,7 @@
                 </dialog>
             </article>
             <article class="container__article">
-                <img class="article__img" src="images/puncionseca.jpg" alt="Imagen de punción seca"
+                <img class="article__img" src="images/puncionseca.webp" alt="Imagen de punción seca"
                     onclick="document.getElementById('puncionSecaModal').showModal()" />
                 <div class="article__text">
                     <h2>PUNCIÓN SECA</h2>
@@ -155,7 +192,7 @@
                 <!-- Modal con <dialog> -->
                 <dialog id="puncionSecaModal">
                     <div class="container__modal">
-                        <img src="images/puncionseca.jpg" alt="Imagen de punción seca" />
+                        <img src="images/puncionseca.webp" alt="Imagen de punción seca" />
                         <h2 class="modal__title">PUNCIÓN SECA</h2>
                         <p class="modal__description">Es una técnica que utilizamos en fisioterapia que consiste en
                             introducir
@@ -170,7 +207,7 @@
                 </dialog>
             </article>
             <article class="container__article">
-                <img class="article__img" src="images/neuromodulacion.jpg"
+                <img class="article__img" src="images/electropuncion.webp"
                     alt="Imagen de electropunción y neuromodulación"
                     onclick="document.getElementById('electroNeuroModal').showModal()" />
                 <div class="article__text">
@@ -179,7 +216,7 @@
                 <!-- Modal con <dialog> -->
                 <dialog id="electroNeuroModal">
                     <div class="container__modal">
-                        <img src="images/neuromodulacion.jpg" alt="Imagen de electropunción y neuromodulación" />
+                        <img src="images/electropuncion.webp" alt="Imagen de electropunción y neuromodulación" />
                         <h2 class="modal__title">ELECTROPUNCIÓN Y NEUROMODULACIÓN</h2>
                         <p class="modal__description">
                             La electropunción es una técnica que se realiza combinando agujas de acupuntura con
@@ -196,7 +233,7 @@
                 </dialog>
             </article>
             <article class="container__article">
-                <img class="article__img" src="images/fisioterapia.jpg" alt="Imagen de ejercicio terapéutico"
+                <img class="article__img" src="images/terapiamanual.webp" alt="Imagen de ejercicio terapéutico"
                     onclick="document.getElementById('ejercicioTerapeuticoModal').showModal()" />
                 <div class="article__text">
                     <h2>EJERCICIO TERAPÉUTICO</h2>
@@ -204,7 +241,7 @@
                 <!-- Modal con <dialog> -->
                 <dialog id="ejercicioTerapeuticoModal">
                     <div class="container__modal">
-                        <img src="images/fisioterapia.jpg" alt="Imagen de ejercicio terapéutico" />
+                        <img src="images/terapiamanual.webp" alt="Imagen de ejercicio terapéutico" />
                         <h2 class="modal__title">EJERCICIO TERAPÉUTICO</h2>
                         <p class="modal__description">Es una parte importante del tratamiento en fisioterapia, ya que
                             favorece una mejor
@@ -222,7 +259,7 @@
                 </dialog>
             </article>
             <article class="container__article">
-                <img class="article__img" src="images/fisioterapiadeportiva.jpg" alt="Imagen de fisioterapia deportiva"
+                <img class="article__img" src="images/vendajefuncional.webp" alt="Imagen de fisioterapia deportiva"
                     onclick="document.getElementById('fisioterapiaDeportivaModal').showModal()" />
                 <div class="article__text">
                     <h2>FISIOTERAPIA DEPORTIVA</h2>
@@ -230,7 +267,7 @@
                 <!-- Modal con <dialog> -->
                 <dialog id="fisioterapiaDeportivaModal">
                     <div class="container__modal">
-                        <img src="images/fisioterapiadeportiva.jpg" alt="Imagen de fisioterapia deportiva" />
+                        <img src="images/vendajefuncional.webp" alt="Imagen de fisioterapia deportiva" />
                         <h2 class="modal__title">FISIOTERAPIA DEPORTIVA</h2>
                         <p class="modal__description">Es una especialidad de la fisioterapia que utiliza diferentes
                             técnicas para recuperar a las personas que sufren lesiones derivadas del deporte. Se
@@ -256,44 +293,39 @@
         </p>
         <div class="container">
             <article class="container__article">
-                <img src="images/dolor_lumbar.jpg" alt="Imagen de terapia manual" />
+                <img src="images/dolordehombro.webp" alt="Imagen de dolor de espalda" />
                 <div class="article__text">
                     <h2>DOLOR DE ESPALDA: CERVICALGIA, DORSALGIA, LUMBALGIA, CIÁTICA, CERVICOBRAQUIALGIA, ENTRE OTRAS.
                     </h2>
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/bruxismo.jpg" alt="Imagen de punción seca" />
+                <img src="images/patologia_atm.webp" alt="Imagen de patología ATM" />
                 <div class="article__text">
                     <h2>DISFUNCIONES DE LA ARTICULACIÓN TEMPOROMANDIBULAR (ATM).</h2>
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/lca.webp" alt="IMAGEN DE ELECTROPUNCIÓN Y NEUROMODULACIÓN" />
+                <img src="images/dolordehombro.webp" alt="Imagen de dolor de hombro" />
                 <div class="article__text">
                     <h2>DOLOR DE HOMBRO (OMALGIAS): CAPSULITIS ADHESIVA (HOMBRO CONGELADO), TENDINOPATÍAS
                         DEL MANGUITO ROTADOR, LUXACIÓN GLENOHUMERAL, SÍNDROME SUBACROMIAL, ETC.</h2>
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/lca.webp" alt="Imagen de ejercicio terapéutico" />
+                <img src="images/lesiondeportiva.webp" alt="Imagen de lesión deportiva" />
                 <div class="article__text">
                     <h2>LESIONES DEPORTIVAS: ESGUINCES, TENDINOPATÍAS (CODO DE TENISTA, CODO DE GOLFISTA,
                         ROTULIANA, AQUÍLEA), FASCITIS PLANTAR, ROTURAS DE LIGAMENTOS CRUZADOS (LCA, LCP).</h2>
                 </div>
             </article>
             <article class="container__article">
-                <img src="images/geriatricos.jpg" alt="Imagen de fisioterapia deportiva" />
+                <img src="images/pacientegeriatrico.webp" alt="Imagen de paciente geriátrico" />
                 <div class="article__text">
                     <h2>PATOLOGÍAS GERIÁTRICAS</h2>
                 </div>
             </article>
-            <article class="container__article">
-                <img src="images/oncologia.jpg" alt="Imagen de fisioterapia deportiva" />
-                <div class="article__text">
-                    <h2>PATOLOGÍAS ONCOLÓGICAS</h2>
-                </div>
-            </article>
+
         </div>
         <p class="patologias__text">
             Si tu caso no encaja exactamente con alguna de estas patologías, no dudes en contactar
@@ -308,7 +340,8 @@
 
             <article class="container__article">
                 <div class="pricing-card">
-                    <h2>FISIOTERAPIA A DOMICILIO <p> TORREJÓN DE ARDOZ </p></h2>
+                    <h2>FISIOTERAPIA A DOMICILIO <p> TORREJÓN DE ARDOZ </p>
+                    </h2>
                     <ul class="tarifa-options">
                         <li>Individual: 40€/sesión</li>
                         <li>Bono 5 sesiones (personal): 185€</li>
@@ -318,7 +351,8 @@
             </article>
             <article class="container__article">
                 <div class="pricing-card">
-                    <h2>FISIOTERAPIA A DOMICILIO <p> CORREDOR DEL HENARES </p></h2>
+                    <h2>FISIOTERAPIA A DOMICILIO <p> CORREDOR DEL HENARES </p>
+                    </h2>
                     <ul class="tarifa-options">
                         <li>Individual: 45€/sesión</li>
                         <li>Bono 5 sesiones (personal): 210€</li>
@@ -328,7 +362,8 @@
             </article>
             <article class="container__article">
                 <div class="pricing-card">
-                    <h2>FISIOTERAPIA A DOMICILIO <p>DE URGENCIA</p></h2>
+                    <h2>FISIOTERAPIA A DOMICILIO <p>DE URGENCIA</p>
+                    </h2>
                     <ul class="tarifa-options">
                         <li>Sábados, Domingos y festivos: 70€</li>
                     </ul>
@@ -336,9 +371,11 @@
             </article>
             <article class="container__article">
                 <div class="pricing-card">
-                    <h2>PILATES TERAPÉUTICO A DOMICILIO <p> TORREJÓN DE ARDOZ </p></h2>
+                    <h2>PILATES TERAPÉUTICO A DOMICILIO <p> TORREJÓN DE ARDOZ </p>
+                    </h2>
                     <h3>Divisible el precio de la sesión entre
-                        las personas que vayan a la sesión <p>(Máximo 3 personas/sesión)</p></h3>
+                        las personas que vayan a la sesión <p>(Máximo 3 personas/sesión)</p>
+                    </h3>
                     <ul class="tarifa-options">
                         <li>1 sesión: 40€</li>
                         <li>Bono 4 sesiones (1/semana): 148€</li>
@@ -348,9 +385,11 @@
             </article>
             <article class="container__article">
                 <div class="pricing-card">
-                    <h2>PILATES TERAPÉUTICO A DOMICILIO <p> CORREDOR DEL HENARES</p></h2>
+                    <h2>PILATES TERAPÉUTICO A DOMICILIO <p> CORREDOR DEL HENARES</p>
+                    </h2>
                     <h3>Divisible el precio de la sesión entre
-                        las personas que vayan a la sesión <p>(Máximo 3 personas/sesión)</p></h3>
+                        las personas que vayan a la sesión <p>(Máximo 3 personas/sesión)</p>
+                    </h3>
                     <ul class="tarifa-options">
                         <li>1 sesión: 45€</li>
                         <li>Bono 4 sesiones (1/semana): 168€</li>
@@ -358,12 +397,13 @@
                     </ul>
                 </div>
             </article>
-            
+
             <article class="container__article">
                 <div class="pricing-card">
                     <h2>PILATES ONLINE </h2>
                     <h3>Divisible el precio de la sesión entre
-                        las personas que vayan a la sesión <p>(Máximo 2 personas/sesión)</p></h3>
+                        las personas que vayan a la sesión <p>(Máximo 2 personas/sesión)</p>
+                    </h3>
                     <ul class="tarifa-options">
                         <li>1 sesión: 32€</li>
                         <li>Bono 4 sesiones (1/semana): 120€</li>
@@ -374,10 +414,10 @@
             <article class="container__article">
                 <div class="pricing-card">
                     <h2>CONVENIOS Y COLABORACIONES </h2>
-                    
+
                     <ul class="tarifa-options">
                         <li>1 sesión: 33€</li>
-                        
+
                     </ul>
                 </div>
             </article>
@@ -385,7 +425,7 @@
         </div>
         <h3>*Los bonos tienen una caducidad de 1 AÑO DESDE LA FECHA DE COMPRA y deberán ser abonados por adelantado.
         </h3>
-        <p >Ante cualquier duda sobre los servicios ofrecidos no duden en ponerse en contacto conmigo.</p>
+        <p>Ante cualquier duda sobre los servicios ofrecidos no duden en ponerse en contacto conmigo.</p>
     </section>
     <section class="container__section" id="contacto">
 
