@@ -364,6 +364,37 @@ dialog::backdrop {
     margin-bottom: 0;
 }
 
+.pricing-card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: white;
+}
+
+.pricing-card h2 {
+    font-size: 2em;
+    color: black;
+}
+
+
+.tarifa-options {
+    list-style-type: none;
+    text-align: start;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.tarifa-options li {
+    padding-bottom: 1em;
+}
+
+
+
 .contact__form {
     display: grid;
     grid-template-columns: 1fr;
@@ -432,11 +463,11 @@ dialog::backdrop {
     background-color: rgba(32, 178, 170);
     /* o el color que quieras al pasar el cursor */
 }
- 
 
- 
+
+
 .icons__socials.footer li a:hover {
-    
+
     background-color: transparent;
     box-shadow: none;
 }
