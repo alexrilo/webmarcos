@@ -78,65 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(hero);
     }
 
-    // BLOQUE: modal tratamientos
-    const tratamientos = [
-        {
-            titulo: "TERAPIA MANUAL",
-            imagen: "images/terapiamanual.webp",
-            descripcion: "Es una técnica de la fisioterapia en la que el profesional utiliza las manos para tratar distintas alteraciones del sistema musculoesquelético ,entre ellas, podemos destacar los masajes terapéuticos (masoterapia), movilizaciones articulares , manipulaciones articulares (thrust), etc. Con esta técnica conseguiremos estimular el flujo sanguíneo, disminuir el dolor, recuperar la movilidad de las articulaciones y por tanto, mejorar la funcionalidad del paciente."
-        },
-        {
-            titulo: "PUNCIÓN SECA",
-            imagen: "images/puncionseca.webp",
-            descripcion: "Es una técnica que utilizamos en fisioterapia que consiste en introducir agujas muy finas, similares a las de acupuntura, justo en el punto donde se acumula tensión o donde se forma una “contractura”. Se utiliza para disminuir la tensión muscular, reducir el dolor y favorecer la regeneración del tejido."
-        },
-        {
-            titulo: "ELECTROPUNCIÓN Y NEUROMODULACIÓN",
-            imagen: "images/electropuncion.webp",
-            descripcion: "La electropunción es una técnica que se realiza combinando agujas de acupuntura con impulsos eléctricos. Por otro lado, la neuromodulación utiliza los impulsos eléctricos para modificar la manera en que los nervios envían la información, lo que ayuda a reducir el dolor crónico. Por lo tanto, ambas son técnicas avanzadas de fisioterapia que se utilizan para mejorar la función neuromuscular y disminuir el dolor."
-        },
-        {
-            titulo: "EJERCICIO TERAPÉUTICO",
-            imagen: "images/terapiamanual.webp",
-            descripcion: "Es una parte importante del tratamiento en fisioterapia, ya que favorece una mejor recuperación tras una lesión. Además, está demostrado que ayuda a las personas que presentan dolor crónico. Consiste en ejercicios planificados y adaptados a cada individuo para reducir el dolor de forma progresiva, disminuir la rigidez articular y muscular, y activar el sistema nervioso para regular la sensibilidad al dolor, especialmente, en pacientes de larga evolución."
-        },
-        {
-            titulo: "FISIOTERAPIA DEPORTIVA",
-            imagen: "images/vendajefuncional.webp",
-            descripcion: "Es una especialidad de la fisioterapia que utiliza diferentes técnicas para recuperar a las personas que sufren lesiones derivadas del deporte. Se utilizan diferentes tratamientos, aunque podemos destacar la utilización de vendajes, como el kinesiotape y el vendaje funcional, que se pueden utilizar para modificar las sensaciones del deportista o limitar ciertos movimientos dolorosos para conseguir una mejor recuperación."
-        },
 
-        // ... más tratamientos
-    ];
-
-    const gridItems = document.querySelectorAll('#grid-tratamientos .grid-item');
-    const modal = document.getElementById('modalTratamiento');
-    const modalImg = document.getElementById('modal-img');
-    const modalTitulo = document.getElementById('modal-titulo');
-    const modalDescripcion = document.getElementById('modal-descripcion');
-    const modalCerrar = document.getElementById('modal-cerrar');
-    const modalOverlay = document.getElementById('modalOverlay');
-
-    if (modal && modalImg && modalTitulo && modalDescripcion && modalCerrar) {
-        gridItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                const t = tratamientos[index];
-                if (!t) return;
-                modalImg.src = t.imagen;
-                modalTitulo.textContent = t.titulo;
-                modalDescripcion.textContent = t.descripcion;
-                modalOverlay.classList.remove('hidden');
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // bloquea scroll
-            });
-        });
-
-        modalCerrar.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            modalOverlay.classList.add('hidden');
-            document.body.style.overflow = ''; // permite scroll
-        });
-    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -161,4 +103,41 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".contact-form").reset();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const openButtons = document.querySelectorAll('.open-modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    openButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modalId = btn.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modal = btn.closest('.modal-overlay');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Cierre al hacer clic fuera del modal
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+        modal.addEventListener('click', e => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+});
+
 

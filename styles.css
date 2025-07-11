@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 html,
@@ -26,6 +27,10 @@ body {
     display: none;
 }
 
+.space {
+    margin-bottom: 1.5rem;
+}
+
 
 /* Menú lateral */
 .side-menu {
@@ -35,7 +40,7 @@ body {
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background-color: #1abc9c;
+    background-color: rgba(26, 188, 156, 0.95);
     color: white;
     padding: 1rem;
     transition: left 0.3s ease;
@@ -133,15 +138,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
     flex: 1 1 50%;
-
 }
 
 .hero-texto h1 {
     font-size: 4rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
+    margin-right: 1rem;
 }
 
 .hero-texto h2 {
@@ -152,7 +158,10 @@ body {
 .hero-texto p {
     font-size: 1.7rem;
     font-style: italic;
+    text-align: right;
+    margin-right: 7em;
 }
+
 
 .hero-persona {
     flex: 0 0 auto;
@@ -163,7 +172,7 @@ body {
 }
 
 .container-section {
-    background-color: #d6f5f2;
+    background-color: f2f2f2;
     /* opcional */
     padding: 3rem 1rem;
     display: flex;
@@ -218,12 +227,16 @@ body {
 .container-grid {
     display: grid;
     gap: 7rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     padding: 1rem;
-    max-width: 70%;
+    max-width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
 }
+
+/*#grid-experiencia {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}*/
 
 
 /* Mejora tarjetas patologías */
@@ -235,6 +248,7 @@ body {
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     border-radius: 16px;
+    height: 300px;
 }
 
 .container-grid .grid-item img {
@@ -261,44 +275,18 @@ body {
 .container-grid .grid-item h3 {
     font-size: 1rem;
     line-height: 1.4;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    /* -webkit-line-clamp: 3; */
     /* límite de líneas */
     -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
     text-align: center;
 }
-
-
-
-
 
 .grid-item p {
     line-height: 1.5;
     min-height: 5em;
-}
-
-
-
-.container-grid-experiencia {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 1rem;
-    max-width: 70%;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-.container-grid-experiencia img {
-    width: 100%;
-    height: 100%;
-    max-height: 250px;
-    border-radius: 8px;
-    object-fit: contain;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 .accordion-content {
@@ -513,6 +501,56 @@ body {
     background-color: #023f3c;
 }
 
+.tarifa-alert-box {
+    background-color: #eafaf7;
+    padding: 1.5rem;
+    border-left: 4px solid #ffc107;
+    margin: 2rem auto;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.tarifa-alert-box p {
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.testimonio-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #1abc9c;
+    /* verde fisioterapia */
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    font-family: 'Inter', sans-serif;
+}
+
+.testimonio-card .comentario {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.testimonio-card .autor {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+    text-align: right;
+}
+
+.estrellas {
+  font-size: 1.3rem;
+  color: #fbbf24; /* amarillo dorado */
+  margin-bottom: 0.5rem;
+}
+
 
 .contact-form {
     max-width: 800px;
@@ -555,6 +593,14 @@ body {
 
 }
 
+.question-mark {
+    font-size: 4rem !important;
+    /* o 64px o lo que desees */
+    text-align: center;
+    color: red;
+    margin: 0;
+}
+
 .contact-form button {
     background-color: #035754;
     color: white;
@@ -566,10 +612,28 @@ body {
     cursor: pointer;
     transition: background 0.3s ease;
     width: 20vw;
-    ;
 }
 
 .contact-form button:hover {
+    background-color: #023d3a;
+}
+
+.reservar-button {
+    background-color: #035754;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 20vw;
+    text-align: center;
+    text-decoration: none;
+}
+
+.reservar-button:hover {
     background-color: #023d3a;
 }
 
@@ -613,6 +677,13 @@ body {
     color: #d1d1d1;
 }
 
+.container-review {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
 
 
 .container-section:nth-of-type(even) {
@@ -621,7 +692,7 @@ body {
 }
 
 .container-section:nth-of-type(odd) {
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
     /* gris muy claro */
 }
 
@@ -646,7 +717,7 @@ body {
     border-radius: 16px;
     width: 100%;
     max-width: 500px;
-    max-height: 85vh;
+    max-height: 90vh;
     overflow-y: auto;
     text-align: center;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -698,18 +769,18 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .container-grid {
 
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .hero-persona {
-        width: 8ovw;
+        width: 25vw;
         /* más grande que en móvil, menos que en escritorio */
-        margin-bottom: 1.5rem;
+
     }
 
     .hero-texto {
@@ -726,6 +797,9 @@ body {
 
     .hero-texto p {
         font-size: 1.1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-right: 0;
     }
 }
 
@@ -756,6 +830,8 @@ body {
 
     .hero-texto h1 {
         font-size: 1.6rem;
+        margin-bottom: 1rem;
+        margin-right: 0;
     }
 
     .hero-texto h2 {
@@ -786,7 +862,7 @@ body {
     }
 
     .container-grid {
-        grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
         gap: 3rem;
     }
 

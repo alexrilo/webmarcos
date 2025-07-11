@@ -2,325 +2,461 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Fisioterapia</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Fisioterapia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
-  <!-- Menú lateral -->
-  <aside id="sideMenu" class="side-menu">
-    <span class="close-btn" onclick="toggleMenu()">×</span>
-    <img src="images/logo.webp" alt="Logo" class="logo" />
-    <nav>
-      <a href="#conocerme" onclick="toggleMenu()">Ven a conocerme</a>
-      <a href="#tratamientos" onclick="toggleMenu()">Tratamientos</a>
-      <a href="#patologias" onclick="toggleMenu()">Patologías</a>
-      <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-      <a id="buttonMenu" href="#formacionesContent" onclick="toggleMenu()">Formación académica</a>
-    </nav>
-    <div class="side-social">
-      <a href="https://www.instagram.com/blazquezm7" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/34681852033" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-  </aside>
-  <div id="menuOverlay" class="menu-overlay hidden" onclick="toggleMenu()"></div>
-  <div id="modalOverlay" class="menu-overlay hidden" onclick="toggleMenu()"></div>
+    <!-- Menú lateral -->
+    <aside id="sideMenu" class="side-menu">
+        <span class="close-btn" onclick="toggleMenu()">×</span>
+        <img src="images/logo.webp" alt="Logo" class="logo" />
+        <nav>
+            <a href="#conocerme" onclick="toggleMenu()">VEN A CONOCERME</a>
+            <a id="buttonMenu" href="#formacionesContent" onclick="toggleMenu()">FORMACIÓN ACADÉMICA</a>
+            <a href="#tratamientos" onclick="toggleMenu()">TRATAMIENTOS</a>
+            <a href="#patologias" onclick="toggleMenu()">PATOLOGÍAS</a>
+            <a href="#tarifas" onclick="toggleMenu()">TARIFAS</a>
+            <a href="#valoraciones" onclick="toggleMenu()">RESEÑAS</a>
+            <a href="#contacto" onclick="toggleMenu()">CONTACTO</a>
+        </nav>
+        <div class="side-social">
+            <a href="https://www.instagram.com/blazquezm7" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/34681852033" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </aside>
+    <div id="menuOverlay" class="menu-overlay hidden" onclick="toggleMenu()"></div>
+    <div id="modalOverlay" class="menu-overlay hidden" onclick="toggleMenu()"></div>
 
 
-  <!-- Botón hamburguesa -->
-  <button class="open-btn white" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
+    <!-- Botón hamburguesa -->
+    <button class="open-btn white" id="hamburgerBtn" onclick="toggleMenu()">☰</button>
 
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <img src="images/marcos.webp" alt="Fisioterapeuta" class="hero-persona">
-        <div class="hero-texto">
-          <h1>FISIOTERAPIA A DOMICILIO</h1>
-          <h2>Especializado en Fisioterapia Manual y Deportiva</h2>
-          <p>"Cuídate y vive sin dolor"</p>
-        </div>
-      </div>
-    </section>
-    <section class="container-section" id="conocerme">
-      <div class="container-text">
-        <h1>VEN A CONOCERME</h1>
-        <div class="description-container">
-          <p>Desde siempre me ha apasionado el deporte y la salud,</p>
-          <p>por lo que he enfocado mi profesión en poder ayudar a las personas a conseguir una mejor calidad de vida
-            sin
-            dolor.por lo que he enfocado mi profesión en poder ayudar a las personas a conseguir una mejor calidad de
-            vida
-            sin dolor.</p>
-          <p>Mi objetivo es ofrecerte una atención individualizada, basada en una correcta valoración, un tratamiento
-            eficaz y un seguimiento continuo adaptado a tus necesidades.</p>
-          <p>Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú rendimiento, estaré encantado
-            de
-            ayudarte.</p>
-        </div>
-      </div>
-      <div class="button-container">
-        <button class="accordion-button" id="toggleFormaciones">FORMACIÓN ACADÉMICA <span
-            class="accordion-arrow">&#9660;</span> </button>
-      </div>
-      <div class="accordion-content" id="formacionesContent">
-        <ul>
-          <li><strong>TÍTULO DE TÉCNICO SUPERIOR EN IMAGEN PARA EL DIAGNÓSTICO Y MEDICINA NUCLEAR - IES SAN
-              ÁLVARO (CÓRDOBA)</strong>
-          </li>
-          <li><strong>GRADUADO EN FISIOTERAPIA EN 2021 - UNIVERSIDAD DE SEVILLA</strong></li>
-          <li><strong>MÁSTER UNIVERSITARIO EN FISIOTERAPIA MANUAL DEL APARATO LOCOMOTOR - UAH</strong>
-            <ul>
-              <li class="sublist">80h de punción seca</li>
-              <li class="sublist">60h de ecografía musculoesquelética</li>
-              <li class="sublist">40h de electrolisis percutánea ecoguiada</li>
-              <li class="sublist">20h de neuromodulación ecoguiada</li>
-            </ul>
-          </li>
-          <li><strong>EXPERTO UNIVERSITARIO EN FISIOTERAPIA PARA LA PRÁCTICA DEPORTIVA - UCAM</strong></li>
-          <li><strong>CURSO: TRATAMIENTO Y ABORDAJE DE LAS TENDINOPATÍAS EN MMII Y MMSS - QERES
-              FORMACIÓN</strong></li>
-          <li><strong>CURSO: PROGRAMA FORMATIVO DE ACTUALIZACIÓN EN EJERCICIO TERAPÉUTICO - CGCFE</strong>
-          </li>
-          <li><strong>CURSO: ENFOQUE FISIOTERÁPICO EN EL DIAGNÓSTICO Y TRATAMIENTO DE LAS PATOLOGÍAS DE LA
-              ATM - ICPFA</strong></li>
-          <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA EN PROCESOS ONCOLÓGICOS -
-              UEMC</strong>
-          </li>
-          <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN REHABILITACIÓN Y FISIOTERAPIA EN
-              GERIATRIA - UEMC</strong></li>
-          <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA CARDIO-RESPIRATORIA -
-              UEMC</strong></li>
-          <li><strong>CURSO: PILATES TERAPÉUTICO - ICPFA</strong></li>
-          <li><strong>CURSO THRUST´N GO - XAVI GREVOL</strong></li>
-        </ul>
-      </div>
-    </section>
-    <section class="container-section" id="experiencia">
-      <div class="container-text">
-        <h1>EXPERIENCIA PROFESIONAL</h1>
-      </div>
-      <div id="grid-experiencia" class="container-grid">
-        <div class="grid-item">
-          <img class="experiencia-img" src="images/triana.webp" alt="Tratamiento 1">
-          <h3> TRIANA CLUB DE FÚTBOL TEMPORADA 2021-2022</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/naya.webp" class="experiencia-img" alt="Tratamiento 1">
-          <h3>A.D. NAYA TEMP. 2023-ACTUALMENTE</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/encadenate.webp" class="experiencia-img" alt="Tratamiento 1">
-          <h3>ENCADENATE S.L. (TORREJÓN DE ARDOZ)</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/logo.webp" class="experiencia-img" alt="Tratamiento 1">
-          <h3>FISIOTERAPIA A DOMICILIO +3 AÑOS</h3>
-        </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="images/marcos.webp" alt="Fisioterapeuta" class="hero-persona">
+                <div class="hero-texto">
+                    <h1>FISIOTERAPIA A DOMICILIO</h1>
+                    <h2>Especializado en Fisioterapia Manual y Deportiva</h2>
+                    <p>"Cuídate y vive sin dolor"</p>
+                </div>
+            </div>
+        </section>
+        <section class="container-section" id="conocerme">
+            <div class="container-text">
+                <h1>VEN A CONOCERME</h1>
+                <div class="description-container">
+                    <p>Desde siempre me ha apasionado el deporte y la salud,
+                        por lo que he enfocado mi profesión
+                    <p class="space">en poder ayudar a las personas a conseguir una <strong>mejor
+                            calidad de
+                            vida</strong>
+                        sin dolor.</p>
+                    <p class="space">Mi <strong>objetivo</strong> es ofrecerte una atención individualizada, basada en
+                        una correcta
+                        valoración, un
+                        tratamiento
+                        eficaz y un seguimiento continuo adaptado a tus necesidades.</p>
+                    <p>Si quieres prevenir o recuperarte de una lesión, además de poder mejorar tú rendimiento, estaré
+                        encantado
+                        de
+                        ayudarte.</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="accordion-button" id="toggleFormaciones">FORMACIÓN ACADÉMICA <span
+                        class="accordion-arrow">&#9660;</span> </button>
+            </div>
+            <div class="accordion-content" id="formacionesContent">
+                <ul>
+                    <li><strong>TÍTULO DE TÉCNICO SUPERIOR EN IMAGEN PARA EL DIAGNÓSTICO Y MEDICINA NUCLEAR - IES SAN
+                            ÁLVARO (CÓRDOBA)</strong>
+                    </li>
+                    <li><strong>GRADUADO EN FISIOTERAPIA EN 2021 - UNIVERSIDAD DE SEVILLA</strong></li>
+                    <li><strong>MÁSTER UNIVERSITARIO EN FISIOTERAPIA MANUAL DEL APARATO LOCOMOTOR - UAH</strong>
+                        <ul>
+                            <li class="sublist">80h de punción seca</li>
+                            <li class="sublist">60h de ecografía musculoesquelética</li>
+                            <li class="sublist">40h de electrolisis percutánea ecoguiada</li>
+                            <li class="sublist">20h de neuromodulación ecoguiada</li>
+                        </ul>
+                    </li>
+                    <li><strong>EXPERTO UNIVERSITARIO EN FISIOTERAPIA PARA LA PRÁCTICA DEPORTIVA - UCAM</strong></li>
+                    <li><strong>CURSO: TRATAMIENTO Y ABORDAJE DE LAS TENDINOPATÍAS EN MMII Y MMSS - QERES
+                            FORMACIÓN</strong></li>
+                    <li><strong>CURSO: PROGRAMA FORMATIVO DE ACTUALIZACIÓN EN EJERCICIO TERAPÉUTICO - CGCFE</strong>
+                    </li>
+                    <li><strong>CURSO: ENFOQUE FISIOTERÁPICO EN EL DIAGNÓSTICO Y TRATAMIENTO DE LAS PATOLOGÍAS DE LA
+                            ATM - ICPFA</strong></li>
+                    <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA EN PROCESOS ONCOLÓGICOS -
+                            UEMC</strong>
+                    </li>
+                    <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN REHABILITACIÓN Y FISIOTERAPIA EN
+                            GERIATRIA - UEMC</strong></li>
+                    <li><strong>CURSO UNIVERSITARIO DE ESPECIALIZACIÓN EN FISIOTERAPIA CARDIO-RESPIRATORIA -
+                            UEMC</strong></li>
+                    <li><strong>CURSO: PILATES TERAPÉUTICO - ICPFA</strong></li>
+                    <li><strong>CURSO THRUST´N GO - XAVI GREVOL</strong></li>
+                </ul>
+            </div>
+        </section>
+        <section class="container-section" id="experiencia">
+            <div class="container-text">
+                <h1>EXPERIENCIA PROFESIONAL</h1>
+            </div>
+            <div id="grid-experiencia" class="container-grid">
+                <div class="grid-item">
+                    <img class="experiencia-img" src="images/triana.webp" alt="Tratamiento 1">
+                    <h3> TRIANA CLUB DE FÚTBOL TEMPORADA 2021-2022</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/naya.webp" class="experiencia-img" alt="Tratamiento 1">
+                    <h3>A.D. NAYA TEMP. 2023-ACTUALMENTE</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/encadenate.webp" class="experiencia-img" alt="Tratamiento 1">
+                    <h3>ENCADENATE S.L. (TORREJÓN DE ARDOZ)</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/logo.webp" class="experiencia-img" alt="Tratamiento 1">
+                    <h3>FISIOTERAPIA A DOMICILIO +3 AÑOS</h3>
+                </div>
 
-      </div>
-    </section>
-    <section class="container-section" id="tratamientos">
-      <div class="container-text">
-        <h1>TRATAMIENTOS</h1>
-        <div class="description-container">
-          <p class="grid-description"><strong>Haz click en las imagenes para ver más información sobre los
-              tratamientos</strong></p>
-        </div>
-      </div>
-      <div id="grid-tratamientos" class="container-grid">
-        <div class="grid-item">
-          <img src="images/terapiamanual.webp" alt="Tratamiento 1">
-          <h3>TERAPIA MANUAL</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/puncionseca.webp" alt="Tratamiento 1">
-          <h3>PUNCIÓN SECA</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/electropuncion.webp" alt="Tratamiento 1">
-          <h3>ELECTROPUNCIÓN Y NEUROMODULACIÓN</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/terapiamanual.webp" alt="Tratamiento 1">
-          <h3>EJERCICIO TERAPÉUTICO</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/vendajefuncional.webp" alt="Tratamiento 1">
-          <h3>FISIOTERAPIA DEPORTIVA</h3>
-        </div>
+            </div>
+        </section>
+        <section class="container-section" id="tratamientos">
+            <div class="container-text">
+                <h1>TRATAMIENTOS</h1>
+                <div class="description-container">
+                    <p class="grid-description">Haz click en las imágenes para saber más información sobre los
+                        tratamientos</p>
+                </div>
+            </div>
 
-      </div>
-    </section>
+            <div id="grid-tratamientos" class="container-grid">
 
-    <section class="container-section" id="patologias">
-      <div class="container-text">
-        <h1>PATOLOGÍAS</h1>
-        <div class="description-container">
-          <p class="p-mb">Abordo una amplia variedad de problemas de salud
-            con especial atención,
-            a las patologías
-            neuromusculoesqueléticas.</p>
-          <p class="center"><strong>Algunas de las más frecuentes son:</strong></p>
-        </div>
-      </div>
-      <div id="grid-patologias" class="container-grid">
-        <div class="grid-item">
-          <img src="images/dolordehombro.webp" alt="Tratamiento 1">
-          <h3>DOLOR DE ESPALDA: CERVICALGIA, DORSALGIA, LUMBALGIA, CIÁTICA, CERVICOBRAQUIALGIA, ENTRE OTRAS.</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/patologia_atm.webp" alt="Tratamiento 1">
-          <h3>DISFUNCIONES DE LA ARTICULACIÓN TEMPOROMANDIBULAR (ATM).</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/dolordehombro.webp" alt="Tratamiento 1">
-          <h3>DOLOR DE HOMBRO (OMALGIAS): CAPSULITIS ADHESIVA (HOMBRO CONGELADO), TENDINOPATÍAS
-            DEL MANGUITO ROTADOR, LUXACIÓN GLENOHUMERAL, SÍNDROME SUBACROMIAL, ETC.</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/lesiondeportiva.webp" alt="Tratamiento 1">
-          <h3>LESIONES DEPORTIVAS: ESGUINCES, TENDINOPATÍAS (CODO DE TENISTA, CODO DE GOLFISTA,
-            ROTULIANA, AQUÍLEA), FASCITIS PLANTAR, ROTURAS DE LIGAMENTOS CRUZADOS (LCA, LCP).</h3>
-        </div>
-        <div class="grid-item">
-          <img src="images/pacientegeriatrico.webp" alt="Tratamiento 1">
-          <h3>PATOLOGÍAS GERIÁTRICAS</h3>
-        </div>
+                <div class="grid-item">
+                    <img src="images/terapiamanual.webp" alt="Terapia Manual" class="open-modal"
+                        data-modal="modal-terapia-manual">
+                    <h3>TERAPIA MANUAL</h3>
+                </div>
 
-      </div>
-    </section>
-    <section class="container-section">
-      <div class="container-text">
-        <h1>TARIFAS</h1>
-        <div class="tarifa-info-box">
-          <p><strong>¿Tienes dudas sobre qué tarifa se ajusta a ti?</strong><br>
-            Los precios pueden variar ligeramente según la zona, el número de personas o el tipo de seguimiento.</p>
-          <p><a href="#contacto" class="btn-contacto">Solicita información</a></p>
-        </div>
-      </div>
+                <div class="grid-item">
+                    <img src="images/puncionseca.webp" alt="Punción Seca" class="open-modal"
+                        data-modal="modal-puncion-seca">
+                    <h3>PUNCIÓN SECA</h3>
+                </div>
 
-      <div class="container-grid tarifas-grid">
+                <div class="grid-item">
+                    <img src="images/electropuncion.webp" alt="Electropunción" class="open-modal"
+                        data-modal="modal-electropuncion">
+                    <h3>ELECTROPUNCIÓN Y NEUROMODULACIÓN</h3>
+                </div>
 
-        <!-- Tarjeta 1 -->
-        <div class="tarifa-card">
-          <h3>Fisioterapia a domicilio<br><span class="zona">Torrejón de Ardoz</span></h3>
-          <p>🧍‍♂️ Individual: <strong>40 €/sesión</strong></p>
-          <p>🎫 Bono 5 sesiones: 185 €</p>
-          <p>👥 Bono 10 (compartido): 350 €</p>
-        </div>
+                <div class="grid-item">
+                    <img src="images/terapiamanual.webp" alt="Ejercicio Terapéutico" class="open-modal"
+                        data-modal="modal-ejercicio-terapeutico">
+                    <h3>EJERCICIO TERAPÉUTICO</h3>
+                </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="tarifa-card">
-          <h3>Fisioterapia a domicilio<br><span class="zona">Corredor del Henares</span></h3>
-          <p>🧍‍♂️ Individual: <strong>45 €/sesión</strong></p>
-          <p>🎫 Bono 5 sesiones: 210 €</p>
-          <p>👥 Bono 10 (compartido): 400 €</p>
-        </div>
+                <div class="grid-item">
+                    <img src="images/vendajefuncional.webp" alt="Fisioterapia Deportiva" class="open-modal"
+                        data-modal="modal-fisioterapia-deportiva">
+                    <h3>FISIOTERAPIA DEPORTIVA</h3>
+                </div>
 
-        <!-- Tarjeta 3 -->
-        <div class="tarifa-card urgente">
-          <h3>Urgencias</h3>
-          <p>📅 Sábados, domingos y festivos</p>
-          <p><strong>70 €/sesión</strong></p>
-        </div>
-        <div class="tarifa-card pilates-card">
-          <h3>Pilates terapéutico a domicilio<br><span>Torrejón de Ardoz</span></h3>
-          <p class="subinfo">Divisible entre los asistentes <br> <strong>(Máximo 3 personas/sesión)</strong></p>
-          <ul>
-            <li>1 sesión: <strong>40 €</strong></li>
-            <li>Bono 4 sesiones (1/semana): <strong>148 €</strong></li>
-            <li>Bono 8 sesiones (2/semana): <strong>280 €</strong></li>
-          </ul>
-        </div>
+            </div>
 
-        <div class="tarifa-card pilates-card">
-          <h3>Pilates terapéutico a domicilio<br><span>Corredor del Henares</span></h3>
-          <p class="subinfo">Divisible entre los asistentes <br> <strong>(Máximo 3 personas/sesión)</strong></p>
-          <ul>
-            <li>1 sesión: <strong>45 €</strong></li>
-            <li>Bono 4 sesiones (1/semana): <strong>168 €</strong></li>
-            <li>Bono 8 sesiones (2/semana): <strong>320 €</strong></li>
-          </ul>
-        </div>
+            <!-- Modales -->
 
-        <div class="tarifa-card pilates-card">
-          <h3>Pilates online</h3>
-          <p class="subinfo">Divisible entre los asistentes <br> <strong>(Máximo 2 personas/sesión)</strong></p>
-          <ul>
-            <li>1 sesión: <strong>32 €</strong></li>
-            <li>Bono 4 sesiones (1/semana): <strong>120 €</strong></li>
-            <li>Bono 8 sesiones (2/semana): <strong>224 €</strong></li>
-          </ul>
-        </div>
+            <div id="modal-terapia-manual" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <img src="images/terapiamanual.webp" alt="Terapia Manual">
+                    <h2>TERAPIA MANUAL</h2>
+                    <p>
+                        Es una técnica de la fisioterapia en la que el profesional utiliza las manos para tratar
+                        distintas
+                        alteraciones del sistema musculoesquelético. Entre ellas, podemos destacar los
+                        <strong>masajes terapéuticos (masoterapia)</strong>, <strong>movilizaciones articulares</strong>
+                        y
+                        <strong>manipulaciones articulares (thrust)</strong>.
+                    </p>
+                    <p>
+                        Con esta técnica conseguimos <strong>estimular el flujo sanguíneo</strong>, <strong>disminuir el
+                            dolor</strong> y
+                        <strong>recuperar la movilidad articular</strong>, mejorando la funcionalidad del paciente.
+                    </p>
+                    <button class="close-modal">Cerrar</button>
+                </div>
+            </div>
+
+            <div id="modal-puncion-seca" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <img src="images/puncionseca.webp" alt="Punción Seca">
+                    <h2>PUNCIÓN SECA</h2>
+                    <p>
+                        Es una técnica que utilizamos en fisioterapia que consiste en introducir agujas muy finas,
+                        similares a las de acupuntura, justo en el punto donde se acumula tensión o donde se forma una
+                        <strong>“contractura”</strong>.
+                    </p>
+                    <p>
+                        Se utiliza para <strong>disminuir la tensión</strong>, <strong>reducir el dolor</strong> y
+                        <strong>acelerar la recuperación del tejido</strong>.
+                    </p>
+                    <button class="close-modal">Cerrar</button>
+                </div>
+            </div>
+
+            <div id="modal-electropuncion" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <img src="images/electropuncion.webp" alt="Electropunción">
+                    <h2>ELECTROPUNCIÓN Y NEUROMODULACIÓN</h2>
+                    <p>
+                        La <strong>electropunción</strong> es una técnica que se realiza combinando agujas de acupuntura
+                        con impulsos
+                        eléctricos.
+                    </p>
+                    <p>
+                        Por otro lado, la <strong>neuromodulación</strong> utiliza los impulsos eléctricos para
+                        modificar la
+                        manera en que los nervios envían la información, lo que ayuda a reducir el dolor crónico. Por lo
+                        tanto, ambas son técnicas avanzadas de fisioterapia que se utilizan para <strong>mejorar la
+                            función
+                            neuromuscular y disminuir el dolor</strong>.
+                    </p>
+                    <button class="close-modal">Cerrar</button>
+                </div>
+            </div>
+
+            <div id="modal-ejercicio-terapeutico" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <img src="images/terapiamanual.webp" alt="Ejercicio Terapéutico">
+                    <h2>EJERCICIO TERAPÉUTICO</h2>
+                    <p>
+                        Es una parte importante del tratamiento en fisioterapia, ya que favorece una mejor recuperación
+                        tras una lesión. Además, está demostrado que <strong>ayuda a las personas que presentan dolor
+                            crónico.</strong>
+                    </p>
+                    <p>
+                        Consiste en ejercicios planificados y adaptados a cada individuo para reducir el dolor de forma
+                        progresiva, <strong>disminuir la rigidez articular y muscular</strong>, y <strong>activar el
+                            sistema nervioso para
+                            regular la sensibilidad al dolor</strong>, especialmente, en pacientes de larga evolución.
+                    </p>
+                    <button class="close-modal">Cerrar</button>
+                </div>
+            </div>
+
+            <div id="modal-fisioterapia-deportiva" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <img src="images/vendajefuncional.webp" alt="Fisioterapia Deportiva">
+                    <h2>FISIOTERAPIA DEPORTIVA</h2>
+                    <p>
+                        Es una especialidad de la fisioterapia que utiliza diferentes técnicas para recuperar a las
+                        personas que sufren <strong>lesiones derivadas del deporte</strong>. Se utilizan diferentes tratamientos, aunque
+                        podemos destacar la <strong>utilización de vendajes</strong>, como <strong>el kinesiotape</strong> y <strong>el vendaje funcional</strong>, que se
+                        pueden utilizar para modificar las sensaciones del deportista o <strong>limitar ciertos movimientos
+                        dolorosos</strong> para conseguir una mejor recuperación.
+                    </p>
+                    <p>
+                        Ayuda a <strong>acelerar la recuperación</strong>, prevenir recaídas y optimizar el rendimiento
+                        físico.
+                    </p>
+                    <button class="close-modal">Cerrar</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container-section" id="patologias">
+            <div class="container-text">
+                <h1>PATOLOGÍAS</h1>
+                <div class="description-container">
+                    <p class="center">A continuación, puedes ver imágenes reales de algunas de las patologías que
+                        trato habitualmente en mi día a día como Fisioterapeuta, entre muchas otras.
+                    </p>
+
+                </div>
+            </div>
+            <div id="grid-patologias" class="container-grid">
+                <div class="grid-item">
+                    <img src="images/dolordehombro.webp" alt="Tratamiento 1">
+                    <h3>DOLOR DE ESPALDA
+                    </h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/patologia_atm.webp" alt="Tratamiento 1">
+                    <h3>DISFUNCIONES MANDIBULARES (ATM)</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/dolordehombro.webp" alt="Tratamiento 1">
+                    <h3>DOLOR DE HOMBRO</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/lesiondeportiva.webp" alt="Tratamiento 1">
+                    <h3>LESIONES DEPORTIVAS</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/pacientegeriatrico.webp" alt="Tratamiento 1">
+                    <h3>PATOLOGÍAS GERIÁTRICAS</h3>
+                </div>
+
+            </div>
+            <div class="description-container">
+                <div class="tarifa-info-box">
+                    <p><strong>¿Tienes dudas sobre si tu lesión se encuentra entre las que abordo?</strong><br>
+                        Si no estás seguro de si tu dolencia se trata aquí, o si tienes cualquier pregunta no dudes en
+                        escribirme. Estaré encantado de ayudarte y orientarte sin compromiso.</p>
+                    <p><a href="#contacto" class="btn-contacto">Solicita información</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="container-section" id="tarifas">
+            <div class="container-text">
+                <h1>TARIFAS</h1>
+                <div class="tarifa-info-box">
+                    <p><strong>¿Tienes dudas sobre qué tarifa se ajusta a ti?</strong><br>
+                        Los precios pueden variar ligeramente según la zona, el número de personas o el tipo de
+                        seguimiento.</p>
+                    <p>Zonas diferentes a Torrejón o el Corredor del Henares (Alcalá de Henares, San Fernando, Coslada,
+                        Loeches, Mejorada Del Campo, Meco...) preguntar sin compromiso.</p>
+
+                    <p><a href="#contacto" class="btn-contacto">Solicita información</a></p>
+                </div>
+            </div>
+
+            <div class="container-grid tarifas-grid">
+
+                <!-- Tarjeta 1 -->
+                <div class="tarifa-card">
+                    <h3>Fisioterapia a domicilio<br><span class="zona">Torrejón de Ardoz</span></h3>
+                    <p>🧍‍♂️ Individual: <strong>40 €/sesión</strong></p>
+                    <p>🎫 Bono 5 sesiones<strong>*</strong>: <strong>185 €</strong></p>
+                    <p><strong>(37€/sesión)</strong></p>
+                    <p>👥 Bono 10 (compartido)<strong>*</strong>: <strong>350 €</strong></p>
+                    <p><strong>(35€/sesión)</strong></p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="tarifa-card">
+                    <h3>Fisioterapia a domicilio<br><span class="zona">Corredor del Henares</span></h3>
+                    <p>🧍‍♂️ Individual: <strong>45 €/sesión</strong></p>
+                    <p>🎫 Bono 5 sesiones<strong>*</strong>: <strong>210 €</strong></p>
+                    <p><strong>(42€/sesión)</strong></p>
+                    <p>👥 Bono 10 (compartido)<strong>*</strong>: <strong>400 €</strong></p>
+                    <p><strong>(40€/sesión)</strong></p>
+                </div>
+
+                <div class="tarifa-card convenio-card">
+                    <h3>Convenios y colaboraciones</h3>
+                    <p>🧍‍♂️ Individual: <strong>35 €/sesión</strong></p>
+                    <p>🎫 Bono 5 sesiones<strong>*</strong>: <strong>160 € </strong></p>
+                    <p><strong>(32€/sesión)</strong></p>
+                    <p class="detalle">Precio especial para miembros de:</p>
+                    <div class="club-logos">
+                        <img src="images/naya.webp" alt="A.D. Naya" />
+                        <img src="images/sinabro.webp" alt="Club Sinabro" />
+                    </div>
+                </div>
+
+                <div class="tarifa-card urgente">
+                    <h3>Urgencias</h3>
+                    <p>📅 Sábados, domingos y festivos</p>
+                    <p class="question-mark">&#10067</p>
+
+                </div>
+            </div>
+            <div class="tarifa-alert-box">
+                <p><strong>*El importe del bono se abona en su totalidad.</strong></p>
+                <p><strong>*Los bonos tienen una duración de 1 año desde la fecha de compra.</strong></p>
+                <p><strong>*Duración de la sesión de 1h aprox.</strong></p>
+            </div>
+        </section>
+        <section class="container-section" id="valoraciones">
+            <div class="container-text">
+                <h1>RESEÑAS</h1>
+                <div class="description-container center">
+                    <p>Opiniones reales de pacientes que han confiado en mí.</p>
+                </div>
+            </div>
+            <div class="testimonio-card">
+                <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                <p class="comentario">“Fisioterapeuta totalmente recomendable, he ido por varias lesiones y dolores con
+                    los que llevaba mucho tiempo mal y he mejorado muchísimo con él. Se preocupa mucho por los clientes,
+                    una atención de 10.”</p>
+                <p class="autor">— Alejandro Rilo Ferreiro</p>
+            </div>
+            <div class="testimonio-card">
+                <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                <p class="comentario">“Fenomenal, me trato durante varias sesiones y genial desde la primera.
+                    Recomendable 100%.”</p>
+                <p class="autor">— Juani Donoso Cubillo</p>
+            </div>
+            <div class="button-container">
+                <a class="reservar-button"
+                    href="https://tufisio.com/fisioterapeuta/torrejon-de-ardoz/fisioterapia-a-domicilio-marcos-blazquez"
+                    target="_blank" rel="noopener noreferrer" type="submit">Reservar cita</a>
+            </div>            
+        </section>
 
 
-        <div class="tarifa-card convenio-card">
-          <h3>Convenios y colaboraciones</h3>
-          <p><strong>1 sesión: 33 €</strong></p>
-          <p class="detalle">Precio especial para miembros de:</p>
-          <div class="club-logos">
-            <img src="images/naya.webp" alt="A.D. Naya" />
-            <img src="images/sinabro.webp" alt="Club Sinabro" />
-          </div>
-        </div>
-      </div>
-    </section>
+        <section class="container-section" id="contacto">
+            <div class="container-text">
+                <h1>CONTACTO</h1>
+                <div class="description-container">
+                    <p>Si quieres más información sobre los tratamientos, o quieres que te ayude a mejorar tu calidad de
+                        vida,
+                        no dudes en ponerte en contacto conmigo.</p>
+                    <p>Estaré encantado de atenderte.</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Nombre" name="nombre" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
+                <textarea name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+                <div class="button-container">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/blazquezm7" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-3x" alt="Instagram"></i>
+                </a>
+                <a href="https://wa.me/34681852033" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp fa-3x" alt="WhatsApp"></i>
+                </a>
+            </div>
 
-    <section class="container-section" id="contacto">
-      <div class="container-text">
-        <h1>CONTACTO</h1>
-        <div class="description-container">
-          <p>Si quieres más información sobre los tratamientos, o quieres que te ayude a mejorar tu calidad de vida,
-            no dudes en ponerte en contacto conmigo.</p>
-          <p>Estaré encantado de atenderte.</p>
-        </div>
-      </div>
-      <form class="contact-form">
-        <div class="form-row">
-          <input type="text" placeholder="Nombre" name="nombre" required>
-          <input type="email" placeholder="Email" name="email" required>
-        </div>
-        <textarea name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
-        <div class="button-container">
-          <button type="submit">Enviar</button>
-        </div>
-      </form>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/blazquezm7" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram fa-3x" alt="Instagram"></i>
-        </a>
-        <a href="https://wa.me/34681852033" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp fa-3x" alt="WhatsApp"></i>
-        </a>
-      </div>
-
-    </section>
+        </section>
 
 
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="index.js"></script>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="index.js"></script>
 </body>
 <div id="modalTratamiento" class="modal-overlay hidden">
-  <div class="modal-content">
-    <img id="modal-img" src="" alt="Imagen tratamiento" />
-    <h2 id="modal-titulo"></h2>
-    <p id="modal-descripcion"></p>
-    <button id="modal-cerrar">Cerrar</button>
-  </div>
+    <div class="modal-content">
+        <img id="modal-img" src="" alt="Imagen tratamiento" />
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descripcion"></p>
+        <button id="modal-cerrar">Cerrar</button>
+    </div>
 </div>
 
 
