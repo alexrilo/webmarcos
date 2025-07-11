@@ -839,6 +839,8 @@ body {
     }
 
     .hero-texto p {
+        text-align: center;
+        margin-right: 0;
         font-size: 1rem;
     }
 
