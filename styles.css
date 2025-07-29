@@ -136,6 +136,7 @@ body {
 
 .hero-content img {
     margin-left: 2rem;
+    height: 65vh;
 }
 
 .hero-texto {
@@ -150,7 +151,7 @@ body {
 }
 
 .hero-texto h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 2rem;
     margin-right: 1rem;
