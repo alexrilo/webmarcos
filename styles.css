@@ -222,10 +222,10 @@ body {
     color: #222;
 }
 
-.social-icon p{
+.social-icon p {
     font-size: 2rem;
     color: #222;
-    
+
 }
 
 .social-text {
@@ -236,7 +236,7 @@ body {
     text-align: center;
     font-size: 1.2rem;
     color: #222;
-    
+
 }
 
 .opinion {
@@ -581,9 +581,10 @@ body {
 }
 
 .estrellas {
-  font-size: 1.3rem;
-  color: #fbbf24; /* amarillo dorado */
-  margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #fbbf24;
+    /* amarillo dorado */
+    margin-bottom: 0.5rem;
 }
 
 
@@ -666,7 +667,7 @@ body {
     width: 35vw;
     text-align: center;
     text-decoration: none;
-    
+
 }
 
 .reservar-button:hover {
@@ -818,6 +819,11 @@ body {
 
     }
 
+    .hero-content img {
+        height: auto;
+    }
+
+
     .hero-texto {
         max-width: 90%;
     }
@@ -856,6 +862,10 @@ body {
         text-align: center;
         padding-right: 1.5rem;
         padding-left: 1.2rem;
+    }
+
+    .hero-content img {
+        height: auto;
     }
 
     .hero-texto {
@@ -921,7 +931,7 @@ body {
         font-size: 0.95rem;
     }
 
-    .description-container {        
+    .description-container {
         text-align: center;
     }
 
@@ -929,6 +939,7 @@ body {
         font-size: 0.5rem;
         gap: 0.5rem;
     }
+
     .social-icon {
         font-size: 1rem;
         flex-direction: row;
@@ -937,13 +948,13 @@ body {
         gap: 0.4rem;
     }
 
-    .social-icon p{
+    .social-icon p {
         font-size: 0.9rem;
     }
 
     .reservar-button {
-        width: 45vw;        
+        width: 45vw;
         font-size: 0.8rem;
-    }   
+    }
 
 }
